@@ -10,6 +10,13 @@ public class HlavniController {
 
     @RequestMapping("/")
     public ModelAndView zobrazIndex() {
-      return new ModelAndView("index");
+        ModelAndView modelAndViewHandler = new ModelAndView("index");
+
+        LocalDate datum = LocalDate.now();
+        LocalDate cas = LocalDate.now();
+
+        modelAndViewHandler.addObject("datum", datum);
+        modelAndViewHandler.addObject("cas", cas);
+        return modelAndViewHandler;
     }
 }
