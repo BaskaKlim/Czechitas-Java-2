@@ -35,8 +35,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="277">
+              <caret line="69" column="41" lean-forward="true" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/Volunteer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -82,9 +91,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/ArticlesRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/registration.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/styly.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inde.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/Volunteer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/registration.html" />
       </list>
     </option>
   </component>
@@ -122,9 +132,88 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cz" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cz" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="czechitas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cz" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="czechitas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="webapp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="10-Volunteers-Informacny-system" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="java-module" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="images" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Course" />
     </panes>
   </component>
@@ -135,7 +224,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586972396591" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586973835667" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
@@ -176,16 +265,18 @@
       <workItem from="1586897271615" duration="3864000" />
       <workItem from="1586949883336" duration="11575000" />
       <workItem from="1586973066465" duration="5000" />
+      <workItem from="1586973378567" duration="378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61072000" />
+    <option name="totallyTimeSpent" value="61450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="23" width="1394" height="765" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22559172" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22559172" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -271,13 +362,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/Article.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/detail.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/ArticlesRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inde.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="72" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/styly.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -292,10 +376,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/Volunteer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inde.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="58" column="72" selection-start-line="58" selection-start-column="72" selection-end-line="58" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="277">
+          <caret line="69" column="41" lean-forward="true" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="53" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,87 @@
+package cz.czechitas.webapp;
+
+import java.awt.*;
+import java.util.*;
+
+
+public class Volunteer {
+    //variables
+    String firstName;
+    String lastName;
+    String email;
+    String job;
+    String bio;
+    String gender;
+    Date date;
+
+    public Volunteer(){
+
+    }
+    
+    public Volunteer(String firstName, String lastName, String email, String job, String bio, String gender, Date date) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.job = job;
+        this.bio = bio;
+        this.gender = gender;
+        this.date = date;
+    }
+
+    //getters and setters - properties (vlastnosti)
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String newValue) {
+        firstName = newValue;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String newValue) {
+        lastName = newValue;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String newValue) {
+        email = newValue;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public void setJob(String newValue) {
+        job = newValue;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String newValue) {
+        bio = newValue;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String newValue) {
+        gender = newValue;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date newValue) {
+        date = newValue;
+    }
+}
