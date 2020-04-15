@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <!-- Add icon library -->
+
+    <script src="https://kit.fontawesome.com/3bdb0c72af.js" crossorigin="anonymous"></script>
+
+    <title>Registration form</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>Pridaj sa medzi zdravotných dobrovolníkov</h2>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" placeholder="Meno" name="firstName">
+            </div>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" placeholder="Priezvisko" name="lastName">
+            </div>
+
+            <div class="input-container">
+                <i class="fa fa-envelope icon"></i>
+                <input class="input-field" type="text" placeholder="Email" name="email">
+            </div>
+
+            <div class="input-container">
+                <i class="fas fa-user-md icon"></i>
+                <input class="input-field" list="roles" placeholder="Tvoja pracovná rola" name="role">
+                <datalist id="roles">
+                    <option value="Zdravotná sestra">
+                    <option value="Študentka medicíny">
+                    <option value="Študent medicíny">
+                    <option value="Doktor">
+                    <option value="Doktorka">
+                </datalist>
+            </div>
+
+            <div class="input-container">
+                <i class="far fa-address-card icon"></i>
+                <textarea rows="4" cols="50" placeholder="Napíš niečo o sebe..." class="input-field"
+                          name="bio"></textarea>
+            </div>
+
+            <div class="input-container">
+                <i class="fas fa-venus-mars icon"></i>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male"><span class="input-radius">Muž</span></label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female"><span class="input-radius">Žena</span></label><br>
+            </div>
+
+            <div class="input-container">
+                <i class="far fa-calendar-alt icon" ></i>
+                <label for="datemax">Začiatok dobrovolníckej:</label>
+                <input type="date" id="datemax" name="datemax" max="2020-04-31"><br><br>
+
+                <label for="datemin">Koniec dobrovolníckej služby:</label>
+                <input type="date" id="datemin" name="datemin" min="2022-01-01"><br><br>
+            </div>
+
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+</body>
+</html>

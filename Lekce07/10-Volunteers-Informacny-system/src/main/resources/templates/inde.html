@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Homepage </title>
+</head>
+<body>
+    <body>
+
+        <div class="about-section">
+            <h1>Sme pripravení pomôcť</h1>
+            <p>Sme študenti medicíny a mladí medici. Aj nás sa dnešná situácia pandémie vírusu COVID-19 týka.</p>
+               <p> Sme pripravení pomôcť zdravotníckym zariadeniam po celom Slovensku a Česku.</p>
+            <p>Spolu to zvládneme.</p>
+        </div>
+
+        <h2 style="text-align:center">Vyberte si svojho dobrovoľníka</h2>
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="../static/images/volunteers/1-min.png" alt="Jane" style="width:100%">
+                    <div class="container">
+                        <h2>Jane Doe</h2>
+                        <p class="title">Zdravotná sestra</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>jane@example.com</p>
+                        <a href="mailto:name@rapidtables.com?subject=The%20subject%20of%20the%20mail"><button class="button">Contact me </button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="../static/images/volunteers/2-min.png" alt="Mike" style="width:100%">
+                    <div class="container">
+                        <h2>Mike Ross</h2>
+                        <p class="title">Študentka medicíny</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>mike@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="../static/images/volunteers/3-min.png" alt="John" style="width:100%">
+                    <div class="container">
+                        <h2>John Doe</h2>
+                        <p class="title">Lekár v zácviku</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <p>john@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
