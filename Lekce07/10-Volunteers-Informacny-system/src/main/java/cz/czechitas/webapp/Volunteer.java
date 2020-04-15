@@ -12,13 +12,13 @@ public class Volunteer {
     String job;
     String bio;
     String gender;
-    Date date;
+    String  date;
 
     public Volunteer(){
 
     }
     
-    public Volunteer(String firstName, String lastName, String email, String job, String bio, String gender, Date date) {
+    public Volunteer(String firstName, String lastName, String email, String job, String bio, String gender, String date) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -77,11 +77,11 @@ public class Volunteer {
         gender = newValue;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date newValue) {
+    public void setDate(String newValue) {
         date = newValue;
     }
 }
