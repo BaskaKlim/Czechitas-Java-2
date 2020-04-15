@@ -13,7 +13,7 @@ public class HlavniController {
         ModelAndView modelAndViewHandler = new ModelAndView("index");
 
         LocalDate datum = LocalDate.now();
-        LocalDate cas = LocalDate.now();
+        LocalTime cas = LocalTime.now();
 
         modelAndViewHandler.addObject("datum", datum);
         modelAndViewHandler.addObject("cas", cas);
