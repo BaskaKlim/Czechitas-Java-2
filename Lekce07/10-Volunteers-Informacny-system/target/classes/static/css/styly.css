@@ -1,4 +1,5 @@
 
+/** homepage **/
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -25,9 +26,9 @@ html {
 }
 
 .about-section {
-    padding: 50px;
+    padding: 60px;
     text-align: center;
-    background-color: dodgerblue;
+    background: url("../images/backgrounds/b4.jpg");
     color: white;
 }
 
@@ -49,9 +50,9 @@ html {
     border: none;
     outline: 0;
     display: inline-block;
-    padding: 8px;
+    padding: 15px;
     color: white;
-    background-color: dodgerblue;
+    background-color: mediumblue;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -70,12 +71,15 @@ html {
 
 }
 
-/*Registration template*/
+/** Registration template **/
+
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-form {
-    max-width:500px;margin:auto
+.form {
+    max-width:500px;
+    margin:auto ;
+
 }
 
 .input-container {
@@ -100,7 +104,7 @@ form {
 }
 
 .input-field:focus {
-    border: 2px solid dodgerblue;
+    border: 2px solid mediumblue;
 }
 
 /* Set a style for the submit button */
@@ -118,7 +122,10 @@ form {
     opacity: 1;
 }
 
-.input-radius {
+.input-text {
     color: grey;
     font-size: 10px;
+    text-align-all: center;
+    padding-left: 7px;
+    margin: auto;
 }

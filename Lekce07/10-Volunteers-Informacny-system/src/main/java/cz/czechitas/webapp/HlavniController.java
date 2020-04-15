@@ -8,10 +8,13 @@ import org.springframework.web.servlet.*;
 
 @Controller
 public class HlavniController {
+    VolunteersRepository volunteers = new VolunteersRepository();
 
-    @RequestMapping("/")
-    public ModelAndView zobrazSeznam() {
-       return new ModelAndView();
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView showHomepage() {
+        ModelAndView modelAndViewHandler = new ModelAndView("inde");
+           modelAndViewHandler.addObject("volunteers",volunteers.showVolunteers());
+       return modelAndViewHandler;
     }
 
 }

@@ -8,6 +8,8 @@ public class Volunteer {
     //variables
     String firstName;
     String lastName;
+    String fullName;
+    String name;
     String email;
     String job;
     String bio;
@@ -43,6 +45,24 @@ public class Volunteer {
 
     public void setLastName(String newValue) {
         lastName = newValue;
+    }
+
+    public String getFullName() {
+        fullName= firstName + " " +lastName;
+        return fullName;
+    }
+
+    public void setFullName(String newValue) {
+        fullName = newValue;
+    }
+
+    public String getName() {
+        name = firstName+lastName;
+        return name;
+    }
+
+    public void setName(String newValue) {
+        name = newValue;
     }
 
     public String getEmail() {
@@ -84,4 +104,5 @@ public class Volunteer {
     public void setDate(String newValue) {
         date = newValue;
     }
+
 }

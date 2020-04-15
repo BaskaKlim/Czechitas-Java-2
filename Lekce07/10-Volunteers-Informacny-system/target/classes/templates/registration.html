@@ -16,8 +16,15 @@
 </head>
 <body>
     <div class="container">
-        <form>
+        <div class="about-section">
             <h2>Pridaj sa medzi zdravotných dobrovolníkov</h2>
+            <p>Vyplň informácie o sebbe a pridaj sa na stránku
+                medzi ostatných medikov, ktorí sa chcú pridať do boja proti vírusu COVID-19
+            </p>
+        </div>
+        <br>
+
+        <form method="post" class="form">
             <div class="input-container">
                 <i class="fa fa-user icon"></i>
                 <input class="input-field" type="text" placeholder="Meno" name="firstName">
@@ -34,8 +41,8 @@
 
             <div class="input-container">
                 <i class="fas fa-user-md icon"></i>
-                <input class="input-field" list="roles" placeholder="Tvoja pracovná rola" name="role">
-                <datalist id="roles">
+                <input class="input-field" list="job" placeholder="Tvoja pracovná rola" name="job">
+                <datalist id="job">
                     <option value="Zdravotná sestra">
                     <option value="Študentka medicíny">
                     <option value="Študent medicíny">
@@ -53,20 +60,24 @@
             <div class="input-container">
                 <i class="fas fa-venus-mars icon"></i>
                 <input type="radio" id="male" name="gender" value="male">
-                <label for="male"><span class="input-radius">Muž</span></label><br>
+                <label for="male"><span class="input-text">Muž</span></label><br>
                 <input type="radio" id="female" name="gender" value="female">
-                <label for="female"><span class="input-radius">Žena</span></label><br>
+                <label for="female"><span class="input-text">Žena</span></label><br>
             </div>
 
             <div class="input-container">
-                <i class="far fa-calendar-alt icon" ></i>
-                <label for="datemax">Začiatok dobrovolníckej:</label>
-                <input type="date" id="datemax" name="datemax" max="2020-04-31"><br><br>
-
-                <label for="datemin">Koniec dobrovolníckej služby:</label>
-                <input type="date" id="datemin" name="datemin" min="2022-01-01"><br><br>
+                <i class="fas fa-camera-retro icon"></i>
+                <input type="file" name="fileToUpload" id="fileToUpload" class="input-field">
             </div>
 
+            <p>Začať chcem od:</p>
+            <div class="input-container">
+                <i class="far fa-calendar-alt icon"></i>
+                <label for="start"></label>
+                <input type="date" id="start" name="work-start"
+                       value="2020-04-20"
+                       min="2020-04-15" max="2021-01-01">
+            </div>
 
             <button type="submit" class="btn">Register</button>
         </form>
