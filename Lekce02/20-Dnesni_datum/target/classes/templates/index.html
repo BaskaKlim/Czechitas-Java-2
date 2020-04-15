@@ -14,8 +14,9 @@
     <div class="page">
 
         <h1>Java 2</h1>
-        <h2>Dnes je <span th:text="${datum}"> 1.1.1999</span> </h2>
-        <p> a je tolkoto hodin <span th:text="${cas}"> 9:09:00</span> <p>
+        <h2>Dnes je <span th:text="${#temporals.format(datum, 'dd.MM.yyyy')}"> 1.1.1999</span> </h2>
+        <p> a je tolkoto hodin <span th:text="${#temporals.format(cas, 'H:mm:ss')}"> 9:09:00</span> <p>
+
 
     </div>
 </body>
