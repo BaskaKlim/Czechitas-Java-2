@@ -17,4 +17,18 @@ public class HlavniController {
        return modelAndViewHandler;
     }
 
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public ModelAndView takeRegistrationFata(RegistrationForm registrationFormData) {
+        ModelAndView modelAndViewHandler = new ModelAndView("registration");
+        modelAndViewHandler.addObject("volunteers",new RegistrationForm());
+        return modelAndViewHandler;
+    }
+
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public ModelAndView spracujNew(RegistrationForm registrationFormData) {
+        volunteers.saveVolunteer(registrationFormData);
+        return new ModelAndView("redirect:/");
+    }
+
+
 }
