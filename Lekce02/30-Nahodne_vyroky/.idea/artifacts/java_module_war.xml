@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="dnesni-datum.war">
+    <root id="archive" name="nahodne-vyroky.war">
       <element id="artifact" artifact-name="java-module:war exploded" />
     </root>
   </artifact>

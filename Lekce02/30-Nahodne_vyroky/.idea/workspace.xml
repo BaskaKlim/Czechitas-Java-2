@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a71d622-ef71-45d4-b781-af39fb49c9e7" name="Default Changelist" comment="" />
+    <list default="true" id="05450db8-e287-4a37-ab8e-48865cdc9f0c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -11,44 +11,49 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/30_Nahodne_vyroky$Run_Spring_Boot.ic" NAME="Run Spring Boot Coverage Results" MODIFIED="1583695656313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="187" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="267">
+              <caret line="16" column="90" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="16" selection-end-column="86" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="288">
+              <caret line="16" column="59" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>\n&quot;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;,</replace>
+    </replaceStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
       </list>
     </option>
   </component>
@@ -57,19 +62,14 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="javadynamickyweb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="javadynamickyweb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="nahodne-vyroky" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
+    <option name="x" value="60" />
     <option name="y" value="23" />
     <option name="width" value="1349" />
     <option name="height" value="765" />
@@ -85,38 +85,38 @@
         <subPane>
           <expand>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -124,8 +124,8 @@
               <item name="czechitas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -134,32 +134,15 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="10-JavaDynamicWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="10-JavaDynamicWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="30-Nahodne_vyroky" type="b2602c69:ProjectViewProjectNode" />
+              <item name="30-Nahodne_vyroky" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -178,13 +161,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583694625235" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -200,25 +177,24 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4a71d622-ef71-45d4-b781-af39fb49c9e7" name="Default Changelist" comment="" />
-      <created>1583688450895</created>
+      <changelist id="05450db8-e287-4a37-ab8e-48865cdc9f0c" name="Default Changelist" comment="" />
+      <created>1583694655789</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583688450895</updated>
-      <workItem from="1583688453061" duration="2961000" />
-      <workItem from="1583704307055" duration="605000" />
-      <workItem from="1586987662113" duration="583000" />
+      <updated>1583694655789</updated>
+      <workItem from="1583694657652" duration="79000" />
+      <workItem from="1583694835038" duration="3751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4149000" />
+    <option name="totallyTimeSpent" value="3830000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="23" width="1349" height="765" extended-state="0" />
+    <frame x="60" y="23" width="1349" height="765" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25325173" />
+      <window_info active="true" id="Project" order="0" visible="true" weight="0.24942617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -226,6 +202,7 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32986626" />
@@ -237,14 +214,14 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Coverage" sideWeight="0.50110865" side_tool="true" weight="0.32976282" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32976282" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49889135" weight="0.32976282" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -257,38 +234,31 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/SpousteciTrida.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+        <state relative-caret-position="343">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="267">
+          <caret line="16" column="90" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="16" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="59" />
         </state>
       </provider>
     </entry>
