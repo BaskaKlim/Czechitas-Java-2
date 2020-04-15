@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <title>Vychodzi stranka - Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Seznam clanku</h1>
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Action</th>
+            </tr>
+
+            <tr th:each="article : ${articles}">
+                <td th:text="${article.number}">1</td>
+                <td th:text="${article.title}">First Article</td>
+                <td th:text="${article.author}"> Kamil Sevecerk</td>
+                <td>
+                    <a th:href="@{'/detail'+ ${article.number}}" href="detail.html" class="button"> Detail</a>
+                    <form th:action="@{'/seznam/' +${article.number}}" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <input type="submit" value="delete" class="button"/>
+                    </form>
+                </td>
+
+            </tr>
+
+            <tr th:remove="all">
+                <td>2</td>
+                <td>Second Article</td>
+                <td>Karol Milk</td>
+                <td>
+                    <a href="detail.html" class="button"> Detail</a>
+                    <form method="post">
+                        <input type="hidden" name="method" value="DELETE">
+                        <input type="submit" value="delete" class="button"/>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    <a th:href="@{'/new'}" href="detail.html" class="button"> Create article </a>
+                </td>
+            </tr>
+
+
+        </table>
+
+    </div>
+</body>
+</html>
