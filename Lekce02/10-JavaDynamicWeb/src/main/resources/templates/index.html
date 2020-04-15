@@ -15,10 +15,14 @@
 
         <h1>Java 2</h1>
 
-        <h2> Ahoj, zdravi vas Lucia </h2>
-           <h3> Nahodne cislo hodene kockou je 0 </h3>
-            <img src="../static/images/kosta1.png"
+        <h2> Ahoj, zdravi vas <span th:text="${jmeno}"Lucia </span> </h2>
+           <h3> Nahodne cislo hodene kockou je <span th:text="${cisloNaKostke}" 0</span></h3>
+            <img th:src="'static/image/kostka'+${cisloNaKostke}+'.png'"
+                 th:alt="'obrazek kostky'+ ${cisloNaKostke}" src="../static/images/kosta1.png"
              />
     </div>
 </body>
 </html>
+
+
+${jmeno}
