@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+
+
+    <title>Generator memes</title>
+<body>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="../static/images/1.jpg"
+                                        th:src="'images/obrazok'+${cisloObrazka}+'.jpg'"
+                                        th:alt="'obrazek '+ ${cisloObrazka}"
+
+  width="1600" height="800">
+
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+
+    <h1 class="w3-xxlarge" span th:text="${vyrok}">Le Catering</span></h1>
+
+  </div>
+</header>
+
+
+</body>
+</html>
