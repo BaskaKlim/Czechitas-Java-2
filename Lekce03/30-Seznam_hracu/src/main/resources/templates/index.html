@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Seznam hracu</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Seznam hracu</h1>
+
+
+        <table style="width:100%">
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+          </tr>
+          <tr th:each= "hrac : ${hraci}">
+            <td  span th:text="${hrac.name}">Jill</span></td>
+            <td span th:text="${hrac.lastname}">Smith</span></td>
+            <td span th:text="${hrac.age}">50</span></td>
+          </tr>
+          <tr th:remove="all">
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+          </tr>
+        </table>
+
+
+    <h1>Seznam hracu za sebou </h1>
+
+
+        <table style="width:100%">
+         
+          <tr th:each= "hrac : ${hraci}">
+
+            <td>
+            <span th:text="${hrac.name}">Jill</span>
+            <span th:text="${hrac.lastname}">Smith</span> ,
+            <span th:text="${hrac.age}">50</span>
+            </td>
+
+          </tr>
+
+          <tr th:remove="all">
+            <td>Eve Jackson , 94</td>
+          </tr>
+          
+        </table>
+    </div>
+</body>
+</html>
