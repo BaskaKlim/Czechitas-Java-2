@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Nakupni seznam - katalog</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Nakupni seznam</h1>
+        <ul>
+          <li th:each= "polozka:${seznam}">
+          <span th:text="${polozka}"> Coffee </span></li>
+          <li th:remove="all"> Tea </li>
+          <li th:remove="all"> Milk</li>
+          <li th:remove="all"> Gin</li>
+          <li th:remove="all"> Lemons</li>
+        </ul>
+
+
+        <table>
+          <tr th:each= "polozka:${seznam}">
+            <td <span th:text="${polozka}">Carrot</span></td>
+          </tr>
+          <tr th:remove="all">
+            <td>Apples</td>
+          </tr>
+        </table>
+
+    </div>
+</body>
+</html>
