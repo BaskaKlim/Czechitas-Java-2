@@ -1,0 +1,110 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&subset=latin-ext');
+
+/* box model */
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: border-box;}
+
+body {
+    padding: 10px 50px;
+    background: bisque url('../images/background.jpg') center center no-repeat;
+    background-size: cover;
+    color: black;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 30px 0;
+    font: 60px/1 'Alfa Slab One', sans-serif;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2, tr, td, p {
+    color: white;
+}
+
+
+.link {
+    display: grid;
+    grid-auto-flow: column;
+    margin-left: 85px;
+
+}
+footer {
+    text-align: center;
+}
+
+.pexeso {
+    width: 850px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(8, 90px);
+    grid-gap: 15px;
+}
+
+.pexeso > * {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+.pexeso > *:hover {
+    transform: translate(-2px, -2px) scale(1.1);
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+.pexeso img {
+    display: block;
+    width: 100%;
+}
+
+.intro, table, .nav {
+    width: 850px;
+    margin: 30px auto;
+    
+
+}
+.table {
+    border-collapse: collapse;
+    text-decoration-color: white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color:lightskyblue;
+}
+.footer {
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.li a:hover {
+    background-color: #111;
+}

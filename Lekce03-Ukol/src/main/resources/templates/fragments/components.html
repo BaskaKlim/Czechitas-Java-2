@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+
+    <header th:fragment="header">
+        <h1>Match your microvirus</h1>
+    </header>
+
+    <nav th:fragment="menu">
+        <ul>
+            <li> <a class="active" link href="/templates/index.html" th:href="@{/}">Homepage</a></li>
+            <li> <a link href="/templates/board.html" th:href="@{/board}">Wall of fame</a></li>
+            <li> <a link href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <footer th:fragment="footer">
+        <p> 2020 &copy; KLIMEK </p>
+    </footer>
+</body>
+</html>

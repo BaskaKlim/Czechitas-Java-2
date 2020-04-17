@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styly.css" />
+    <link rel="icon" href="images/favicon.png" />
+    <title>Pexeso</title>
+</head>
+
+<body>
+    <div th:insert="fragments/components :: menu"></div>
+    <div th:insert="fragments/components :: header"></div>
+
+    <div class="link">
+       <a link href="/templates/index.html" th:href="@{/}">   Mix it! </a>
+ </div>
+
+    <div class="pexeso">
+
+        <th:block th:each="image: ${pexeso}">
+
+        <img src="images/pex1.jpg"
+             th:src="'images/'+${image}+'.jpg'"
+             th:alt="'obrazek s nazvom '+ ${image}"
+
+             alt="obrazek pexesa 1"
+         />
+
+         </th:block>
+
+        <img th:remove="all" src="images/pex0.jpg" />
+        <img th:remove="all" src="images/pex0.jpg" />
+        <img th:remove="all" src="images/pex2.jpg" />
+        <img th:remove="all" src="images/pex3.jpg" />
+        <img th:remove="all" src="images/pex3.jpg" />
+        <img th:remove="all" src="images/pex4.jpg" />
+        <img th:remove="all" src="images/pex4.jpg" />
+        <img th:remove="all" src="images/pex5.jpg" />
+        <img th:remove="all" src="images/pex5.jpg" />
+        <img th:remove="all" src="images/pex6.jpg" />
+        <img th:remove="all" src="images/pex6.jpg" />
+
+        <img th:remove="all" src="images/pex7.jpg" />
+        <img th:remove="all" src="images/pex7.jpg" />
+        <img th:remove="all" src="images/pex8.jpg" />
+        <img th:remove="all" src="images/pex8.jpg" />
+        <img th:remove="all" src="images/pex9.jpg" />
+        <img th:remove="all" src="images/pex9.jpg" />
+        <img th:remove="all" src="images/pex10.jpg" />
+        <img th:remove="all" src="images/pex0.jpg" />
+        <img th:remove="all"  src="images/pex11.jpg" />
+        <img th:remove="all" src="images/pex11.jpg" />
+        <img th:remove="all" src="images/pex12.jpg" />
+        <img th:remove="all"  src="images/pex12.jpg" />
+
+        <img th:remove="all" src="images/pex13.jpg" />
+        <img th:remove="all" src="images/pex0.jpg" />
+        <img th:remove="all" src="images/pex14.jpg" />
+        <img th:remove="all" src="images/pex14.jpg" />
+        <img th:remove="all" src="images/pex15.jpg" />
+        <img th:remove="all" src="images/pex15.jpg" />
+        <img th:remove="all" src="images/pex16.jpg" />
+        <img th:remove="all" src="images/pex16.jpg" />
+        <img th:remove="all" src="images/pex17.jpg" />
+        <img th:remove="all" src="images/pex17.jpg" />
+        <img th:remove="all" src="images/pex18.jpg" />
+        <img th:remove="all" src="images/pex18.jpg" />
+
+        <img th:remove="all" src="images/pex19.jpg" />
+        <img th:remove="all" src="images/pex19.jpg" />
+        <img th:remove="all" src="images/pex20.jpg" />
+        <img th:remove="all" src="images/pex0.jpg" />
+        <img th:remove="all" src="images/pex21.jpg" />
+        <img th:remove="all" src="images/pex21.jpg" />
+        <img th:remove="all" src="images/pex22.jpg" />
+        <img th:remove="all" src="images/pex22.jpg" />
+        <img th:remove="all" src="images/pex23.jpg" />
+        <img th:remove="all" src="images/pex23.jpg" />
+        <img th:remove="all" src="images/pex24.jpg" />
+        <img th:remove="all" src="images/pex24.jpg" />
+
+    </div>
+   <div th:insert="fragments/components :: footer"></div>
+
+</body>
+</html>
