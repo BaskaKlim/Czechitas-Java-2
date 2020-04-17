@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>E-shop</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Moj e-shop </h1>
+      <a href="kosik.html" >Go to basket</a>
+
+       <table style="width:60%">
+         <tr>
+           <th>Item</th>
+           <th>Price</th>
+           <th>Quantity in store</th>
+         </tr>
+         <tr >
+           <td >Lemons</span></td>
+           <td >0,99$ per kg</span></td>
+           <td >15 kg</span></td>
+         </tr>
+         <tr>
+           <td>Oranges</td>
+           <td>1,29$ per kg</td>
+           <td>12 kg</td>
+         </tr>
+       </table>
+
+    </div>
+</body>
+</html>
