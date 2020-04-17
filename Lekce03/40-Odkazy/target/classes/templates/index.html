@@ -13,32 +13,26 @@
 <body>
     <div class="page">
 
-
-        <h1> Moj e-shop - shopping basket</h1>
-        <a href="index.html" th:href="@{/}"> homepage </a>
+        <h1>Moj e-shop </h1>
+        <a href="kosik.html" th:href="@{/kosik}">Go to basket</a>
 
         <table style="width:60%">
             <tr>
                 <th>Item</th>
                 <th>Price</th>
-                <th>Quantity in basket</th>
+                <th>Quantity in store</th>
             </tr>
-            
-            /* polozku si mozem nazvat ako chcem ale taham ju s templatu kosik   */
-
-            <tr th:each = "item : ${items}">
-                <td span th:text="${item.name}">Lemons</span></td>
-                <td span th:text="${item.price}">13,99</span></td>
-                <td span th:text="${item.quantity}">0,897g</span></td>
+            <tr th:each="item : ${basket}">
+                <td th:text="${item.name}">Lemons</span></td>
+                <td th:text="${item.price}">0,99$ per kg</span></td>
+                <td th:text="${item.quantity}">15 kg</span></td>
             </tr>
             <tr th:remove="all">
                 <td>Oranges</td>
                 <td>1,29$ per kg</td>
-                <td>1,23 g</td>
+                <td>12 kg</td>
             </tr>
         </table>
-
-
 
     </div>
 </body>

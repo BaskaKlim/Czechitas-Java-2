@@ -2,10 +2,10 @@ package cz.czechitas.webapp;
 
 public class Item {
     String name;
-    int price;
+    Double price;
     int quantity;
 
-    public Item(String name, int price, int quantity) {
+    public Item(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -19,11 +19,11 @@ public class Item {
         name = newValue;
     }
 
-    public int getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(int newValue) {
+    public void setPrice(double newValue) {
         price = newValue;
     }
 
