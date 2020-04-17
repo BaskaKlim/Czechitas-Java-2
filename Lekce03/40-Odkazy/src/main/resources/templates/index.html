@@ -22,7 +22,7 @@
                 <th>Price</th>
                 <th>Quantity in store</th>
             </tr>
-            <tr th:each="item : ${basket}">
+            <tr th:each="item : ${items}">
                 <td th:text="${item.name}">Lemons</span></td>
                 <td th:text="${item.price}">0,99$ per kg</span></td>
                 <td th:text="${item.quantity}">15 kg</span></td>

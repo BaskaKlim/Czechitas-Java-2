@@ -24,9 +24,9 @@
                 <th>Quantity in basket</th>
             </tr>
             
-            /* polozku si mozem nazvat ako chcem ale taham ju s templatu kosik   */
+            <!--polozku si mozem nazvat ako chcem ale taham ju s templatu kosik   */-->
 
-            <tr th:each = "item : ${items}">
+            <tr th:each = "item : ${basket}">
                 <td span th:text="${item.name}">Lemons</span></td>
                 <td span th:text="${item.price}">13,99</span></td>
                 <td span th:text="${item.quantity}">0,897g</span></td>

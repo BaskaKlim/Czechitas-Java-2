@@ -22,4 +22,16 @@ public class HlavniController {
         return modelAndViewHandler;
     }
 
+    @RequestMapping("/kosik")
+    public ModelAndView showKosik() {
+        ModelAndView modelAndViewHandler = new ModelAndView("kosik");
+        List<Item> kosikZoznam = new ArrayList<>();
+        kosikZoznam.add(items.get(0));
+        kosikZoznam.add(items.get(3));
+
+        //nazov template, list/iny objekt ktory menime na template
+        modelAndViewHandler.addObject("basket", kosikZoznam);
+        return modelAndViewHandler;
+    }
+
 }
