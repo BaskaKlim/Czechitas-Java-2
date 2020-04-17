@@ -1,37 +1,37 @@
 package cz.czechitas.webapp;
 
 public class Item {
-    String Item;
-    int Price;
-    int Quantity;
+    String name;
+    int price;
+    int quantity;
 
-    public Item(String item, int price, int quantity) {
-        Item = item;
-        Price = price;
-        Quantity = quantity;
+    public Item(String name, int price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
     }
 
-    public String getItem() {
-        return Item;
+    public String getName() {
+        return name;
     }
 
-    public void setItem(String newValue) {
-        Item = newValue;
+    public void setName(String newValue) {
+        name = newValue;
     }
 
     public int getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(int newValue) {
-        Price = newValue;
+        price = newValue;
     }
 
     public int getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(int newValue) {
-        Quantity = newValue;
+        quantity = newValue;
     }
 }
