@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/img/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+
+    <title>Camel Calculator</title>
+
+    <meta name="description"
+          content="Here you can calculate how many camels your girlfriend or boyfriend is worth.">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet prefetch"
+          type="text/css">
+</head>
+
+</head>
+
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns">
+                    <h1>How many camels for your hipster?</h1>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <form method="post">
+        <div class="container">
+            <form method="post">
+
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label for="age">Age: </label>
+                        </h4>
+                    </div>
+
+                    <div class="eight columns">
+                        <span id="ageValue"> </span>
+                        <input type="range" id="age" name="age" class="range" min="15" max="90"
+                               style="width: 160px;"/>
+                        <script>
+                            var range = document.getElementById("age");
+                            var output = document.getElementById("ageValue");
+                            output.innerHTML = range.value;
+
+                            range.oninput = function () {
+                                output.innerHTML = this.value;
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label for="height"> Height (cm):</label>
+                        </h4>
+                    </div>
+                    <div class="eight columns">
+                        <span id="heightValue"> </span>
+                        <input type="range" id="height" class="range" name="height" min="140" max="220"
+                               style="width: 160px;">
+
+                        <script>
+                            var range2 = document.getElementById("height");
+                            var output2 = document.getElementById("heightValue");
+                            output2.innerHTML = range2.value;
+
+                            range2.oninput = function () {
+                                output2.innerHTML = this.value;
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label for="haircolor"> Hair color: </label>
+                        </h4>
+                    </div>
+                    <div class="eight columns">
+                        <select id="haircolor" name="haircolor" class="u-full-width">
+                            <option value="blonde">blonde</option>
+                            <option value="brown">brown</option>
+                            <option value="black">black</option>
+                            <option value="red">red</option>
+                            <option value="grey">grey</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Hair length:</label>
+                        </h4>
+                    </div>
+
+                    <div class="eight columns">
+                        <div class="justified">
+                            <nav class="segmented">
+                                <input type="radio" name="hairlength" value="long" id="l"/>
+                                <label for="l">
+                                    <img src="../static/img/hair4.png" alt="long"
+                                         th:src="'img/hair4.png'" th:alt="'long hair'">
+                                </label>
+                                <input type="radio" name="hairlength" value="middle" id="m"/>
+                                <label for="m">
+                                    <img src="../static/img/hair3.png" alt="middle"
+                                    th:src="'img/hair3.png'" th:alt="'middle hair'">
+                                </label>
+
+                                <input type="radio" name="hairlength" value="short" id="s"
+                                       checked="checked"/>
+                                <label for="s">
+                                    <img src="../static/img/hair2.png" alt="sort"
+                                         th:src="'img/hair2.png'" th:alt="'sort hair'">
+
+                                </label>
+
+                                <input type="radio" name="hairlength" value="bald" id="g"/>
+                                <label for="g">
+                                    <img src="../static/img/hair1.png" alt="bald"
+                                         th:src="'img/hair1.png'" th:alt="'none hair'">
+                                </label>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label for="eyecolor">Eye color: </label>
+                        </h4>
+                    </div>
+
+                    <div class="eight columns" id="eyecolor">
+                        <label class="inline-radio">
+                            <input type="radio" name="eyecolor" value="blue" checked="checked">
+                            <span class="label-body">blue</span>
+                        </label>
+                        <label class="inline-radio">
+                            <input type="radio" name="eyecolor" value="green">
+                            <span class="label-body">green</span>
+                        </label>
+                        <label class="inline-radio">
+                            <input type="radio" name="eyecolor" value="brown">
+                            <span class="label-body">brown</span>
+                        </label>
+                        <label class="inline-radio">
+                            <input type="radio" name="eyecolor" value="grey">
+                            <span class="label-body">grey</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Beard:</label>
+                        </h4>
+                    </div>
+
+                    <div class="eight columns">
+                        <div class="justified">
+                            <nav class="segmented">
+                                <input type="radio" name="beard" value="none" id="beard-a"
+                                       checked="checked"/>
+                                <label for="beard-a">
+                                    <img src="../static/img/beard-none.png" alt="none"
+                                    th:src="'img/beard-none.png'" th:alt="'none beard'">
+                                </label>
+
+                                <input type="radio" name="beard" value="small" id="beard-b"/>
+                                <label for="beard-b">
+                                    <img src="../static/img/beard-small2.png" alt="small"
+                                         th:src="'img/beard-small.png'" th:alt="'small beard'">
+
+                                </label>
+
+                                <input type="radio" name="beard" value="middle" id="beard-c"/>
+                                <label for="beard-c">
+                                    <img src="../static/img/beard-middle.png" alt="middle"
+                                         th:src="'img/beard-middle.png'" th:alt="'middle beard'">
+                                </label>
+
+                                <input type="radio" name="beard" value="large" id="beard-d"/>
+                                <label for="beard-d">
+                                    <img src="../static/img/beard-full.png" alt="large"
+                                    th:src="'img/beard-full.png'" th:alt="'large beard'">
+                                </label>
+                            </nav>
+                        </div>
+                    </div>
+
+
+                    <div class="row form-row">
+                        <div class="four columns">
+                            <h4>
+                                <label> Style: </label>
+                            </h4>
+                        </div>
+                        <div class="eight columns">
+                            <div class="justified">
+                                <nav class="segmented">
+                                    <input type="radio" name="style" value="h0" id="biceps-a"
+                                           checked="checked"/>
+                                    <label for="biceps-a">
+                                        <img src="../static/img/h0.png" alt="A"
+                                             th:src="'img/h0.png'" th:alt="'A'">
+                                    </label>
+
+                                    <input type="radio" name="style" value="h1" id="biceps-b"/>
+                                    <label for="biceps-b">
+                                        <img src="../static/img/h1.png" alt="B"
+                                             th:src="'img/h1.png'" th:alt="'B'">
+                                    </label>
+
+                                    <input type="radio" name="style" value="h2" id="biceps-c"/>
+                                    <label for="biceps-c">
+
+                                        <img src="../static/img/h2.png" alt="C"
+                                             th:src="'img/h2.png'" th:alt="'C'">
+                                    </label>
+
+                                    <input type="radio" name="style" value="h3" id="biceps-d"/>
+                                    <label for="biceps-d">
+
+                                        <img src="../static/img/h3.png" alt="D"
+                                             th:src="'img/h3.png'" th:alt="'D'">
+                                    </label>
+
+                                    <input type="radio" name="style" value="h4" id="biceps-e"/>
+                                    <label for="biceps-e">
+
+                                        <img src="../static/img/h4.png" alt="E"
+                                             th:src="'img/h4.png'" th:alt="'E'">
+                                    </label>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="twelve columns submit-row">
+
+                            <input type="submit" class="button-primary" value="calculate">
+                        </div>
+                    </div>
+
+                    >
+                </div>
+            </form>
+        </div>
+    </form>
+
+</body>
+</html>
