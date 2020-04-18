@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Vychodzi stranka - Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Vypocet</h1>
+           <ul>
+           <form method="post">
+                 <li>
+                     <label for="c1"> Cislo 1: </label>
+                     <input id="c1" name="cislo1" type="number" />
+                 </li>
+
+                  <li>
+                     <label for="c2"> Cislo 1: </label>
+                    <input id="c2" name="cislo2" type="number" />
+                  </li>
+
+                   <li>
+                        <input type="submit" value="prepocitat" />
+                   </li>
+            </ul>
+           </form>
+
+    </div>
+</body>
+</html>
