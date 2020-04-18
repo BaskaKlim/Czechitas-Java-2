@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/img/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Offer</title>
+</head>
+<body>
+
+    <header>
+        <div class="page">
+            <div class="container">
+                <div class="row">
+                    <div class="twelve columns">
+
+                        <h2>Gain <span th:text="${numberOfCamels}" style="color: chocolate"> Hlaska</span> camels for your hipster!
+                        </h2>
+                        <h2><span th:text="${message}"> Hlaska </span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    ]
+    <form method="post">
+        <div class="container">
+            <form method="post">
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Age: </label>
+                        </h4>
+                    </div>
+
+                    <div class="eight columns">
+                        <span th:text="${age}"> pocet  noh </span>
+                    </div>
+                </div>
+
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Height (cm): </label>
+                        </h4>
+                    </div>
+                    <div class="eight columns">
+                        <span th:text="${height}"> pocet hlav </span>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Hair color: </label>
+                        </h4>
+                    </div>
+                    <div class="eight columns">
+                        <span th:text="${haircolor}"> pocet hlav </span>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Hair length: </label>
+                        </h4>
+                    </div>
+                    <div class="eight columns">
+                        <div class="justified">
+                            <nav class="segmented">
+                                <span th:text="${hairlength}"> pocet hlav </span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Eye color: </label>
+                        </h4>
+                    </div>
+
+                    <div class="eight columns">
+                        <div class="justified">
+                            <nav class="segmented">
+                                <span th:text="${eyecolor}"> pocet hlav </span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label> Beard: </label>
+                        </h4>
+                    </div>
+
+                    <div class="eight columns">
+                        <div class="justified">
+                            <nav class="segmented">
+                                <span th:text="${beard}"> pocet hlav </span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-row">
+                    <div class="four columns">
+                        <h4>
+                            <label>Style: </label>
+                        </h4>
+                    </div>
+                    <div class="eight columns">
+                        <div class="justified">
+                            <nav class="segmented">
+                                <span th:text="${style}"> pocet hlav </span>
+                                </span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+    </form>
+</body>
+</html>
+
