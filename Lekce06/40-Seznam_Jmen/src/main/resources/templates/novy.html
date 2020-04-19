@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Pridat dalsiho velikana</h1>
+
+        <form method="post">
+            <div>
+                <label for="jmeno"> Jmeno: </label>
+                <input id="jmeno" type="text" name="jmeno"/>
+            </div>
+
+            <input i type="submit" value="pridat"/>
+
+
+            </label>
+
+        </form>
+        <a href="novy.html"> Pridat jmeno</a>
+    </div>
+</body>
+</html>
+
