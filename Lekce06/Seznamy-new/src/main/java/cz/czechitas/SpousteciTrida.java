@@ -10,15 +10,8 @@ public class SpousteciTrida {
         seznamJmen.add("Nikola Tesla");
         seznamJmen.add("Jean-Paul Sartre");
 
-
         while (true) {
-            System.out.println();
-            System.out.println("Zadajte jmeno: ");
-            Scanner console = new Scanner(System.in);
-            String riadok = console.nextLine();
-
-            if (riadok.isEmpty()) break;
-            seznamJmen.add(riadok);
+            System.out.println("Seznam jmen: ");
 
      /* for (String jmeno: seznamJmen){
       System.out.println(jmeno);  }
@@ -28,6 +21,14 @@ public class SpousteciTrida {
                 String jmeno = seznamJmen.get(i);
                 System.out.println(i + " " + jmeno);
             }
+            System.out.println();
+            System.out.println("Zadajte jmeno: ");
+            Scanner console = new Scanner(System.in);
+            String riadok = console.nextLine();
+
+            if (riadok.isEmpty()) break;
+            seznamJmen.add(riadok);
+
 
         }
 
