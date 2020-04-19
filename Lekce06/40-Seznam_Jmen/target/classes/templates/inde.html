@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Seznam Velikanu</h1>
+
+        <table>
+            <tr th:each="jmeno,iterator : ${seznamJmen}">
+                <td th:text="${iterator.index +1}"> 10</td>
+                <td th:text="${jmeno}"> Barbara</td>
+            </tr>
+        </table>
+        <a href="novy.html"> Pridat jmeno</a>
+    </div>
+</body>
+</html>
