@@ -12,7 +12,13 @@ public class SpousteciTrida {
 
 
         while (true) {
-            System.out.println("Seznam jmen: ");
+            System.out.println();
+            System.out.println("Zadajte jmeno: ");
+            Scanner console = new Scanner(System.in);
+            String riadok = console.nextLine();
+
+            if (riadok.isEmpty()) break;
+            seznamJmen.add(riadok);
 
      /* for (String jmeno: seznamJmen){
       System.out.println(jmeno);  }
