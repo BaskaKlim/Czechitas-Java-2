@@ -27,3 +27,17 @@ public class HlavniController {
 
   
     }
+
+
+    @RequestMapping(value = "/novy.html", method = RequestMethod.GET)
+    public ModelAndView zobraNovy() {
+        return new ModelAndView("novy");
+    }
+
+    @RequestMapping(value = "/novy.html", method = RequestMethod.POST)
+    public ModelAndView pracujNovy(@RequestParam String jmeno) {
+        seznamJmen.add(jmeno);
+        return new ModelAndView("redirect:/");
+    }
+
+}
