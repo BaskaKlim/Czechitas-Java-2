@@ -7,7 +7,7 @@ import org.springframework.web.servlet.*;
 @Controller
 public class HlavniController {
 
-    
+    BookRepository library = new BookRepository();
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView zobrazIndex() {
