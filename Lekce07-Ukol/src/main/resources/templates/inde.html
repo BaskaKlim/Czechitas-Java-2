@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Book List</h1>
+        <a th:href="@{'/new'}" href="new.html" class="button create">Add new book</a>
+        <div th:each="book : ${library}" class="book">
+            <div class="icon">
+                <img th:src="'images/book-'+ ${book.author}+'.png'" src="../static/images/book.png" alt=""/>
+            </div>
+            <div class="content">
+                <h2 th:text="${book.author}" class="author">Stephen Hawking</h2>
+                <h3 th:text="${book.title}" class="title">Brief Answers To The Big Questions</h3>
+                <br>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <br>
+                <p> Book Number: <span th:text="${book.keyNumber}"> 1 </span></p>
+                <form th:action="@{'/booklibrary/'+${book.keyNumber}}" method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="submit" value="Delete" class="button">
+                </form>
+                <a th:href="@{'/detail'+ ${book.keyNumber}}" href="detail.html" class="button"> Detail </a>
+            </div>
+        </div>
+        <div th:remove="all" class="book">
+            <div class="icon">
+                <img src="../static/images/book.png" alt=""/>
+            </div>
+            <div class="content">
+                <h2 class="author">Stephen Hawking</h2>
+                <h3 class="title">Brief Answers To The Big Questions</h3>
+                <br>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut a aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in...
+                </p>
+                <p> Book Number: <span th:text="${book.keyNumber}"> 1 </span></p>
+                <a href="detail.html" class="button"> Detail</a>
+                <a class="button"> Delete</a>
+            </div>
+        </div>
+        <div th:remove="all" class="book">
+            <div class="icon">
+                <img src="../static/images/book.png" alt=""/>
+            </div>
+            <div class="content">
+                <h2 class="author">Stephen Hawking</h2>
+                <h3 class="title">Brief Answers To The Big Questions</h3>
+                <br>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut a aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in...
+                </p>
+                <p> Book Number: <span th:text="${book.keyNumber}"> 1 </span></p>
+                <a class="button"> Detail</a>
+                <a class="button"> Delete</a>
+            </div>
+        </div>
+        <div th:remove="all" class="book">
+            <div class="icon">
+                <img src="../static/images/book.png" alt=""/>
+            </div>
+            <div class="content">
+                <h2 class="author">Stephen Hawking</h2>
+                <h3 class="title">Brief Answers To The Big Questions</h3>
+                <br>
+                <p> Book Number: <span th:text="${book.keyNumber}"> 1 </span></p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut a aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in...
+                </p>
+                <a class="button"> Detail</a>
+                <a class="button"> Delete</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+
