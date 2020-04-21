@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <title>Vychodzi stranka - Java 2</title>
+</head>
+<body>
+    <div class="container-detail">
+        <h1> About book</h1>
+        <div class="book-detail">
+            <div class="cover">
+                <img th:src="'images/book-'+ ${book.author}+'.png'" src="../static/images/book.png"
+                     alt=""/>
+            </div>
+            <form method="post">
+                <div class="content-detail">
+                    <h2><span th:text="${book.author}" class="author-detail">Stephen Hawking</span></h2>
+                    <br>
+                    <h3><span th:text="${book.title}"
+                              class="title-detail">Brief Answers To The Big Questions</span></h3>
+                    <br>
+                    <p th:text="${book.detail}"> A Brief History of Time: From the Big Bang to Black Holes is a popular-science book on
+                        cosmology (the study of the origin and evolution of the universe) by British physicist
+                        Stephen Hawking. It was first published in 1988. Hawking wrote the book for readers who
+                        have no prior knowledge of the universe and people who are just interested in learning
+                        something new.
+                        <br>
+                        In A Brief History of Time, Hawking writes in non-technical terms about the structure,
+                        origin, development and eventual fate of the Universe, which is the object of study of
+                        astronomy and modern physics. He talks about basic concepts like space and time, basic
+                        building blocks that make up the Universe (such as quarks) and the fundamental forces that
+                        govern it (such as gravity). He writes about cosmological phenomena such as the Big Bang
+                        and black holes. He discusses two major theories, general relativity and quantum mechanics,
+                        that modern scientists use to describe the Universe. Finally, he talks about the search
+                        for a unifying theory that describes everything in the Universe in a coherent manner.
+                        <br>
+                        The book became a bestseller and sold more than 25 million copies.
+
+                    </p>
+                </div>
+            </form>
+        </div>
+        <a th:href="@{'/new'+ ${book.keyNumber}}" href="new.html" class="button"/> Edit </a>
+        <a th:href="@{'/booklibrary'}" href="inde.html" class="button"> Back</a>
+    </div>
+
+</body>
+</html>
+
