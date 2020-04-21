@@ -13,6 +13,7 @@ public class HlavniController {
     //sestavit seznam jmen souborů automaticky (podle obsahu složky) pomocou Spring Framework třídu ResourcePatternResolver.
 
     private List<String> images;
+    private List<Boolean> trues;
 
     public HlavniController() throws IOException {
         ResourcePatternResolver fileSearcher = new PathMatchingResourcePatternResolver();
@@ -21,6 +22,15 @@ public class HlavniController {
         images = new ArrayList<>(resources.size());
         for (Resource prvek : resources) {
             images.add(prvek.getFilename());
+        }
+        // logic algorithms for true or false answer
+        trues = new ArrayList<>();
+        for (String image : images) {
+            if (image.contains("T")) {
+                trues.add(true);
+            } else {
+                trues.add(false);
+            }
         }
 
     }
@@ -34,6 +44,8 @@ public class HlavniController {
         modelAndViewhandler.addObject("images", images);
         return modelAndViewhandler;
     }
+
+    
 
 
 
