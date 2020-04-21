@@ -35,7 +35,7 @@ public class HlavniController {
 
     }
 
-        @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
 
     public ModelAndView zobrazIndex() {
         ModelAndView modelAndViewhandler = new ModelAndView("inde");
@@ -45,10 +45,33 @@ public class HlavniController {
         return modelAndViewhandler;
     }
 
-    
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public ModelAndView vratIndex(HomelessFacesForm dataForm) {
+        int score = 0;
+        String message;
+        boolean answer;
+        boolean rightAnswer;
 
+        for (int i = 0; i < dataForm.getAnswer().size(); i++) {
+            answer = dataForm.getAnswer().get(i);
+            rightAnswer = trues.get(i);
+            if (answer == rightAnswer) {
+                score++;
+            }
+        }
 
+        if (score < 3) {
+            message = "Are you kidding me? You really do not see the difference";
+        } else if (score > 2 && score < 6) {
+            message = "Hmm ok, you are not a detective, but your score is not shame";
+        } else
+            message = "Olalaaa,FBI agent!";
 
+        ModelAndView dataHandler = new ModelAndView("result");
+        dataHandler.addObject("score", score);
+        dataHandler.addObject("message", message);
+        return dataHandler;
+    }
 
 }
 
