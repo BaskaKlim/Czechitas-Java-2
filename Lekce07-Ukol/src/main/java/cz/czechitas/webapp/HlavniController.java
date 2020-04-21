@@ -42,5 +42,37 @@ public class HlavniController {
 
 
 
+    @RequestMapping(value = "/new{keyNumber}", method = RequestMethod.POST)
+    public ModelAndView vratDetail(@PathVariable("keyNumber") Long number, DetailForm detailForm) {
+        library.editBook(number, detailForm);
+        return new ModelAndView("redirect:/booklibrary");
+    }
+
+
+    @RequestMapping(value = "/new", method = RequestMethod.GET)
+    public ModelAndView zobrazNew(DetailForm detailForm) {
+        ModelAndView modelAndViewhandler = new ModelAndView("new");
+        modelAndViewhandler.addObject("book",new DetailForm());
+        return modelAndViewhandler;
+    }
+
+    @RequestMapping(value = "/new", method = RequestMethod.POST)
+    public ModelAndView createBook(DetailForm detailForm) {
+        library.saveBook(detailForm);
+        return new ModelAndView("redirect:/booklibrary");
+    }
+
+    //variable path calling from server - bookdetail1, bookdetail 2, bookdetail3 ...
+    @RequestMapping(value = "/new{keyNumber}", method = RequestMethod.GET)
+    public ModelAndView editDetail(@PathVariable("keyNumber") Long keyNumber) {
+        ModelAndView modelAndViewhandler = new ModelAndView("new");
+        //adding object to MVC articles, that i want to use in thymeleaf in html
+        modelAndViewhandler.addObject("book",library.showBookDetail(keyNumber));
+        return modelAndViewhandler;
+    }
+
+
+
+
 
 }
