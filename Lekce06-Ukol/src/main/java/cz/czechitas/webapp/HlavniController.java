@@ -10,14 +10,31 @@ import org.springframework.web.servlet.*;
 
 @Controller
 public class HlavniController {
+    //sestavit seznam jmen souborů automaticky (podle obsahu složky) pomocou Spring Framework třídu ResourcePatternResolver.
 
+    private List<String> images;
 
-    @RequestMapping("/")
+    public HlavniController() throws IOException {
+        ResourcePatternResolver fileSearcher = new PathMatchingResourcePatternResolver();
+        List<Resource> resources = Arrays.asList(fileSearcher.getResources("classpath:/static/images/faces/*"));
+
+        images = new ArrayList<>(resources.size());
+        for (Resource prvek : resources) {
+            images.add(prvek.getFilename());
+        }
+
+    }
+
+        @RequestMapping(value = "/", method = RequestMethod.GET)
 
     public ModelAndView zobrazIndex() {
+        ModelAndView modelAndViewhandler = new ModelAndView("inde");
+        Collections.shuffle(images);
 
-        return  new ModelAndView("inde");
+        modelAndViewhandler.addObject("images", images);
+        return modelAndViewhandler;
     }
+
 
 
 
