@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="@{'/css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="@{'/images/favicon.png'}"/>
+    <title>Vychodzi stranka - Java 2</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Add or Edit Book</h1>
+        <div class="book-detail">
+            <div class="cover">
+                <img th:src="@{'/images/book-new.png'}" src="../static/images/book-new.png" alt=""/>
+            </div>
+            <form id="myForm" method="post">
+                <div class="content-detail">
+                    <lablel for="author">
+                        <h3 class="author-detail">
+                            Author of the book:
+                        </h3>
+                        <input type="text" name="author" id="name" th:value="${book.author}">
+                    </lablel>
+                    <br>
+                    <lablel for="title">
+                        <h3 class="title-detail">
+                            Title of the book:
+                        </h3>
+                        <input type="text" id="title" name="title" th:value="${book.title}">
+                    </lablel>
+                    <br>
+                    <lablel for="detail">
+                        <h3 class="about">
+                            About the book:
+                        </h3>
+                        <textarea cols="110px" form="myForm" th:text="${book.detail}"id="detail" name="detail" rows="8"></textarea>
+
+                    </lablel>
+                    <lablel>
+                        <input type="submit" value="save" class="button"/>
+                        <a th:href="@{'/booklibrary'}" href="inde.html" class="button"> Back</a>
+                    </lablel>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
+
