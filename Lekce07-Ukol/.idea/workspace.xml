@@ -40,11 +40,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+            <state relative-caret-position="532">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/new.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/DetailForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -118,12 +136,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/FormData.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/inde.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/new.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/styly.css" />
         <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/Book.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/detail.html" />
         <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/BookRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/novy.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/new.html" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/DetailForm.java" />
       </list>
     </option>
   </component>
@@ -245,7 +265,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587505681130" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587505706689" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -279,12 +299,12 @@
       <workItem from="1585502203015" duration="110000" />
       <workItem from="1586539957615" duration="52971000" />
       <workItem from="1586977986868" duration="2490000" />
-      <workItem from="1587504314466" duration="1142000" />
+      <workItem from="1587504314466" duration="1387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62090000" />
+    <option name="totallyTimeSpent" value="62335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="96" y="79" width="1132" height="765" extended-state="0" />
@@ -391,13 +411,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/new.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/DetailForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/styly.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -431,8 +444,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/HlavniController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="532">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/czechitas/webapp/DetailForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
         </state>
       </provider>
     </entry>
