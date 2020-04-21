@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Homelessland</title>
+</head>
+<body>
+
+    <h1>HomelessLand</h1>
+    <form method="post">
+
+        <div th:each="image, iterator : ${images}" class="itemFaceAndVote">
+            <img th:src="'images/faces/'+ ${image}"
+                 src="../static/images/faces/man1-T.jpg"
+                 alt="face"/>
+
+            <div class="radioVote">
+                <label>
+
+                    <input type="radio" th:name="'answer[' + ${iterator.index} + ']'" name="answer[1]"
+                           value="true"/>
+                    Politician
+                </label>
+
+                <label>
+                    <input type="radio" th:name="'answer[' + ${iterator.index} + ']'" name="answer[1]"
+                           value="false"/>
+                    Homelessman
+                </label>
+
+            </div>
+        </div>
+
+
+        <div th:remove="all" class="itemFaceAndVote">
+            <img src="../static/images/faces/man2-F.jpg"
+                 alt="face2"/>
+            <div class="radioVote">
+                <label>
+
+                    <input type="radio" name="answer[2]" value="true" checked="checked"/>
+                    Profesor
+                </label>
+                <label>
+                    <input type="radio" name="answer[2]" value="false"/>
+                    Bezdomovec
+                </label>
+            </div>
+        </div>
+
+        <div th:remove="all" class="itemFaceAndVote">
+            <img src="../static/images/faces/man2-F.jpg"
+                 alt="face3"/>
+            <div class="radioVote">
+                <label>
+
+                    <input type="radio" name="answer[3]" value="false" checked="checked"/>
+                    Politician
+                </label>
+                <label>
+                    <input type="radio" name="answer[3]" value="true"/>
+                    Bezdomovec
+                </label>
+            </div>
+        </div>
+
+            <input type="submit" value="Check the result" class="itemSubmit"/>
+
+
+    </form>
+</body>
+</html>
