@@ -79,5 +79,28 @@ public class BookRepository {
         library.remove(index);
 
     }
-    
+
+
+
+    public void saveBook(DetailForm detailForm) {
+
+
+        String newAuthor = detailForm.getAuthor();
+        String newTitle = detailForm.getTitle();
+        String newDetail = detailForm.getDetail();
+        Book newBook = new Book(sequence++, newAuthor,newTitle,newDetail);
+        library.add(newBook);
+    }
+
+    public void editBook(Long keyNumber, DetailForm detailForm) {
+        for (Book b : library) {
+            if (b.keyNumber.equals(keyNumber)) {
+                b.setAuthor(detailForm.getAuthor());
+                b.setTitle(detailForm.getTitle());
+                b.setDetail(detailForm.getDetail());
+            }
+        }
+
+    }
+
 }
