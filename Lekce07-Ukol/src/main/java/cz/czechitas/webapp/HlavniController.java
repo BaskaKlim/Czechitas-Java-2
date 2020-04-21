@@ -23,7 +23,12 @@ public class HlavniController {
         modelAndViewhandler.addObject("library", library.showLibrary());
         return modelAndViewhandler;
     }
-
+    
+    @RequestMapping(value = "/booklibrary/{keyNumber}", method = RequestMethod.POST, params = "_method=DELETE")
+    public ModelAndView zmazBook(@PathVariable("keyNumber") Long keyNumber) {
+        library.deleteBook(keyNumber);
+        return new ModelAndView("redirect:/booklibrary");
+    }
 
 
 
