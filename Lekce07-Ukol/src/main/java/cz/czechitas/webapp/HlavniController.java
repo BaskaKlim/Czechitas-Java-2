@@ -31,5 +31,16 @@ public class HlavniController {
     }
 
 
+    //variable path calling from server - bookdetail1, bookdetail 2, bookdetail3 ...
+    @RequestMapping(value = "/detail{keyNumber}", method = RequestMethod.GET)
+    public ModelAndView zobrazDetail(@PathVariable("keyNumber") Long keyNumber) {
+        ModelAndView modelAndViewhandler = new ModelAndView("detail");
+        //adding object to MVC articles, that i want to use in thymeleaf in html
+        modelAndViewhandler.addObject("book",library.showBookDetail(keyNumber));
+        return modelAndViewhandler;
+    }
+
+
+
 
 }
