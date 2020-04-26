@@ -17,10 +17,16 @@ public class SpousteciTrida {
         JdbcTemplate requestSender = new JdbcTemplate(configDatabase);
 
         //TODO: zisti kolko je pocet zapisov = zakaznikov v databaze
-        
-       Long numberOfClients = requestSender.queryForObject("select count (*) from customers", Long.class);
 
-       System.out.println("V databaze je "+ numberOfClients + " zakaznikov");
+        Long numberOfClients = requestSender.queryForObject("select count (*) from customers", Long.class);
+
+        System.out.println("V databaze je " + numberOfClients + " zakaznikov");
+
+        //TODO: ziskej jmeno zakasnika s ID 22
+                                                              // queryForObject(select , return type.class )
+        String nameOfClient22 = requestSender.queryForObject("select concat(firstname, ' ', lastname) from customers where id=22", String.class);
+        System.out.println("Meno zakaznika s ID 22 je  " + nameOfClient22);
+
     }
 
 }
