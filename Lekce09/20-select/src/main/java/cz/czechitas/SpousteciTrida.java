@@ -1,6 +1,7 @@
 package cz.czechitas;
 
 import java.sql.*;
+import java.util.*;
 import org.mariadb.jdbc.*;
 import org.springframework.jdbc.core.*;
 
@@ -35,6 +36,14 @@ public class SpousteciTrida {
         Customer customer = requestSender.queryForObject("select * from customer where id =? and firstname = ?", prevodnik, id, firstname);
 
         System.out.println("Zakaznik  " + customer);
+
+
+        //TODO: ziskaj a vypis vsetky zakazniky
+        List<Customer> customers = requestSender.query("select * from customers", prevodnik);
+
+        for(Customer eachCustomer: customers) {
+            System.out.println(eachCustomer);
+        }
     }
 
 }
