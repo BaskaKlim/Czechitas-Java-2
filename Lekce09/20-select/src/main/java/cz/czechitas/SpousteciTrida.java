@@ -18,15 +18,21 @@ public class SpousteciTrida {
 
         //TODO: zisti kolko je pocet zapisov = zakaznikov v databaze
 
-        Long numberOfClients = requestSender.queryForObject("select count (*) from customers", Long.class);
+        Long numberOfCustomers = requestSender.queryForObject("select count (*) from customers", Long.class);
 
-        System.out.println("V databaze je " + numberOfClients + " zakaznikov");
+        System.out.println("V databaze je " + numberOfCustomers + " zakaznikov");
 
         //TODO: ziskej jmeno zakasnika s ID 22
-                                                              // queryForObject(select , return type.class )
-        String nameOfClient22 = requestSender.queryForObject("select concat(firstname, ' ', lastname) from customers where id=22", String.class);
-        System.out.println("Meno zakaznika s ID 22 je  " + nameOfClient22);
+        // queryForObject(select , return type.class )
+        String nameOfCustomer22 = requestSender.queryForObject("select concat(firstname, ' ', lastname) from customers where id=22", String.class);
+        System.out.println("Meno zakaznika s ID 22 je  " + nameOfCustomer22);
 
+        //TODO: ziskaj celeho zakaznika //
+        //mapovanie dat z databazy na objekt
+        RowMapper<Customer> prevodnik = BeanPropertyRowMapper.newInstance(Customer.class);
+        Customer customer = requestSender.queryForObject("select * from customer where id =22", prevodnik);
+
+        System.out.println("Zakaznik  " + customer);
     }
 
 }
