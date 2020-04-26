@@ -22,15 +22,17 @@ public class SpousteciTrida {
 
         System.out.println("V databaze je " + numberOfCustomers + " zakaznikov");
 
-        //TODO: ziskej jmeno zakasnika s ID 22
-        // queryForObject(select , return type.class )
+        //TODO: ziskej jmeno zakasnika s ID 22 //
+        //queryForObject(select , return type.class )
         String nameOfCustomer22 = requestSender.queryForObject("select concat(firstname, ' ', lastname) from customers where id=22", String.class);
         System.out.println("Meno zakaznika s ID 22 je  " + nameOfCustomer22);
 
         //TODO: ziskaj celeho zakaznika //
         //mapovanie dat z databazy na objekt
+        Long id = 22L;
+        String firstname = "Jan";
         RowMapper<Customer> prevodnik = BeanPropertyRowMapper.newInstance(Customer.class);
-        Customer customer = requestSender.queryForObject("select * from customer where id =22", prevodnik);
+        Customer customer = requestSender.queryForObject("select * from customer where id =? and firstname = ?", prevodnik, id, firstname);
 
         System.out.println("Zakaznik  " + customer);
     }
