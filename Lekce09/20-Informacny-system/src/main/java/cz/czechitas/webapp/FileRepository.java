@@ -85,4 +85,10 @@ public class FileRepository implements ArticleRepository {
         }
     }
 
+
+    // method for cloning an article
+    private Article clone(Article original) {
+        return new Article(original.getNumber(), original.getTitle(), original.getAuthor(), original.getDate());
+    }
+
 }
