@@ -1,5 +1,7 @@
 package cz.czechitas.webapp;
 
+import java.time.*;
+
 public class Article {
 
     private Long number;
@@ -7,7 +9,7 @@ public class Article {
     private String author;
 
     //empty constructor
-    public Article() {
+    public Article(long l, String group, String s, LocalDate parse) {
 
     }
 
