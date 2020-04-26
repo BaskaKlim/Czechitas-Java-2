@@ -7,7 +7,10 @@ import java.time.*;
 import java.time.format.*;
 import java.util.*;
 import java.util.regex.*;
+import org.springframework.http.*;
 import org.springframework.stereotype.*;
+import org.springframework.web.server.*;
+import com.sun.java.util.jar.pack.*;
 
 @Repository
 public class FileRepository implements ArticleRepository {
@@ -27,20 +30,60 @@ public class FileRepository implements ArticleRepository {
 
     @Override
     public Article findArticleViaNumber(Long number) {
-        throw new UnsupportedOperationException();
+        List<Article> articles = showArticles();
+        int index = najdiIndexZaznamu(articles, number);
+        return clone(articles.get(index));
     }
 
-    @Override
-    public void saveArticle(DetailForm detailForm) {
-        throw new UnsupportedOperationException();
+    public void saveArticle(Article savingArticle) {
+        List<Article> articles = showArticles();
+        if (savingArticle.getNumber() != null) {
+            int index = najdiIndexZaznamu(articles, savingArticle.getNumber());
+            if (index != -1) {
+                editArticle(articles, savingArticle, index);
+                return;
+            }
+        }
+        addArticle(articles, savingArticle);
+
     }
 
     @Override
     public void deleteArticleViaNumber(Long number) {
-        throw new UnsupportedOperationException();
+        List<Article> articles = showArticles();
+        int index = najdiIndexZaznamu(articles, number);
+        if (index == -1) return;
+        articles.remove(index);
+        saveDataToFile(articles);
+    }
+    /*Methods for action with article */
+
+    public void editArticle(List<Article> articles, Article savingArticle, int index) {
+        Article article = clone(savingArticle);
+        articles.set(index, article);
+        saveDataToFile(articles);
     }
 
-    /* Methods for acting with file */
+    private void addArticle(List<Article> articles, Article articlesForSaving) {
+        Article article = clone(articlesForSaving);
+        article.setNumber(keyNumber);
+        keyNumber = keyNumber + 1L;
+        articles.add(article);
+        saveDataToFile(articles);
+    }
+
+    private int najdiIndexZaznamu(List<Article> articles, Long number) {
+        for (int i = 0; i < articles.size(); i++) {
+            Article article = articles.get(i);
+            if (article.getNumber().equals(number)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+    /* Methods for action with file */
 
     private List<Article> loadDataFromFile() {
         try {
@@ -56,8 +99,8 @@ public class FileRepository implements ArticleRepository {
                 Article oneArticle = new Article(
                         Long.parseLong(regularniAutomat.group(1)),
                         regularniAutomat.group(2),
-                        regularniAutomat.group(3),
-                        LocalDate.parse(regularniAutomat.group(4), DateTimeFormatter.ISO_DATE));
+                        regularniAutomat.group(3)
+                );
                 articles.add(oneArticle);
             }
             return articles;
@@ -74,8 +117,7 @@ public class FileRepository implements ArticleRepository {
 
                 String row = oneArticle.getNumber() + ",\""
                         + oneArticle.getTitle() + "\",\""
-                        + oneArticle.getAuthor() + "\","
-                        + oneArticle.getDate().format(DateTimeFormatter.ISO_DATE);
+                        + oneArticle.getAuthor() + "\"";
                 rows.add(row);
             }
             //zapis do file
@@ -85,10 +127,9 @@ public class FileRepository implements ArticleRepository {
         }
     }
 
-
     // method for cloning an article
     private Article clone(Article original) {
-        return new Article(original.getNumber(), original.getTitle(), original.getAuthor(), original.getDate());
+        return new Article(original.getNumber(), original.getTitle(), original.getAuthor());
     }
 
 }

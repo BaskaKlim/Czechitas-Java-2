@@ -1,5 +1,6 @@
 package cz.czechitas.webapp;
 
+import java.time.*;
 import java.util.*;
 import java.util.concurrent.*;
 import org.springframework.stereotype.*;
@@ -18,12 +19,9 @@ public class RAMRepository implements ArticleRepository {
             new Article(keyNumber++, "Lex Luthor", "I will be back")
     ));
 
-
-
-    public List<Article> showArticles(){
+    public List<Article> showArticles() {
         return articles;
     }
-
 
     public void saveArticle(DetailForm detailForm) {
         //vytiahnem si informacie z formulara do novych premennych

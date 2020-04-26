@@ -8,8 +8,6 @@ public interface ArticleRepository {
 
     Article findArticleViaNumber(Long number);
 
-    void saveArticle(DetailForm detailForm) ;
-
     void deleteArticleViaNumber(Long number);
 
 
