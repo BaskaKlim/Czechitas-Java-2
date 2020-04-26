@@ -4,7 +4,7 @@ import java.util.*;
 
 public interface ArticleRepository {
 
-    List<Article> findAll();
+    List<Article> showArticles();
 
     Article findArticleViaNumber(Long number);
 

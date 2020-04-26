@@ -1,7 +1,5 @@
 package cz.czechitas.webapp;
 
-import java.util.*;
-import java.util.concurrent.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.*;
@@ -9,9 +7,9 @@ import org.springframework.web.servlet.*;
 @Controller
 public class HlavniController {
 
-    ArticlesRepository articles;
+    RAMRepository articles;
 
-    public HlavniController( ArticlesRepository articles){
+    public HlavniController(RAMRepository articles){
         this.articles =articles;
 
     }
@@ -26,7 +24,7 @@ public class HlavniController {
     public ModelAndView zobrazSeznam() {
         ModelAndView modelAndViewhandler = new ModelAndView("inde");
         //adding object to MVC articles, that i want to use in thymeleaf in html
-        modelAndViewhandler.addObject("articles", articles.getArticles());
+        modelAndViewhandler.addObject("articles", articles.showArticles());
         return modelAndViewhandler;
     }
 

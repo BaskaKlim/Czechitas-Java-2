@@ -6,7 +6,7 @@ import org.springframework.stereotype.*;
 
 @Repository
 
-public class ArticlesRepository {
+public class RAMRepository implements ArticleRepository {
 
     private Long keyNumber = 1000L;
 
@@ -20,7 +20,7 @@ public class ArticlesRepository {
 
 
 
-    public List<Article> getArticles(){
+    public List<Article> showArticles(){
         return articles;
     }
 
