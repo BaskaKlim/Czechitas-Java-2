@@ -7,17 +7,21 @@ public class Article {
     private Long number;
     private String title;
     private String author;
+    private LocalDate date;
 
-    //empty constructor
-    public Article(long l, String group, String s, LocalDate parse) {
 
+    public Article( String title, String author, LocalDate date) {
+        this.title = title;
+        this.author = author;
+        this.date = date;
     }
 
     //full constructor
-    public Article(Long number, String title, String author) {
+    public Article(Long number, String title, String author, LocalDate date) {
         this.number = number;
         this.title = title;
         this.author = author;
+        this.date = date;
     }
 
     //Getters and setters for accessing to variables
@@ -43,5 +47,13 @@ public class Article {
 
     public void setAuthor(String newValue) {
         author = newValue;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate newValue) {
+        date = newValue;
     }
 }
