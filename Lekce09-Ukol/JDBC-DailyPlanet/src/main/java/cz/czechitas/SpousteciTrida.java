@@ -29,5 +29,14 @@ public class SpousteciTrida {
         System.out.println("Clanok s id 2 : " + articlebyID + "\n"
                 + "Autor clanku s nazvom " + title + "je: " + authorOfArticleByTitle + "\n");
 
+        //TODO 2: select all articles
+
+        List<Article> articles = requestSender.query("SELECT * FROM clanky", mapper);
+        System.out.println("Zoznam clanku: ");
+        for (Article eachArticle : articles) {
+            System.out.println(eachArticle);
+        }
+
+        //TODO 3: Update 1 contact
     }
 }
