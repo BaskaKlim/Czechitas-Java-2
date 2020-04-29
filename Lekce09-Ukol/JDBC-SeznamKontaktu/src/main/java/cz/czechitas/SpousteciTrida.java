@@ -25,9 +25,9 @@ public class SpousteciTrida {
 
         //TODO 1: select 1 all object from database
         String email = "thomas@edison.com";
-        Contact contactByID = requestSender.queryForObject("SELECT * FROM kontakt WHERE id =4", mapper);
+        Contact contactByID = requestSender.queryForObject("SELECT * FROM kontakt WHERE id =2", mapper);
         String nameOfcontactByEmail = requestSender.queryForObject("SELECT jmeno FROM kontakt WHERE email=?", String.class, email);
-        System.out.println("Kontakt s ID 4 je: " + contactByID + "\n");
+        System.out.println("Kontakt s ID 2 je: " + contactByID + "\n");
         System.out.println("Kontakt s mailom tomas@edison.com patri cloveku s menom  : " + nameOfcontactByEmail + "\n");
 
         //TODO 2: select all contacts
@@ -65,11 +65,27 @@ public class SpousteciTrida {
                         },
                         generatedKeyHolder);
 
-        //select whole table
-        List<Contact> contactList = requestSender.query("SELECT * FROM kontakt", mapper);
-        for (Contact eachContact : contactList) {
-            System.out.println(contactList);
+        //print cely zoznam
+        for (Contact eachCustomer : allContacts) {
+            System.out.println(eachCustomer);
         }
+        System.out.println("\n");
 
+        //TODO 4: Delete data from database - one contact
+
+        GeneratedKeyHolder generatedKeyHolderOfDeleteRequest = new GeneratedKeyHolder();
+        String deletedID = "12";
+        requestSender
+                .update((Connection conn) -> {
+                    PreparedStatement StatementDelete = conn.prepareStatement("DELETE FROM kontakt WHERE id = ?", Statement.RETURN_GENERATED_KEYS);
+                    StatementDelete.setString(1, deletedID);
+                    return StatementDelete;
+                }, generatedKeyHolderOfDeleteRequest);
+
+        for (Contact eachCustomer : allContacts) {
+            System.out.println(eachCustomer);
+
+        }
+        System.out.println("\n");
     }
 }
