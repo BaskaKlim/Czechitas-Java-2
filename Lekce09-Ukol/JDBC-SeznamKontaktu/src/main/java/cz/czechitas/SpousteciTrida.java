@@ -17,9 +17,11 @@ public class SpousteciTrida {
         // pripojenie k databaze , argument konstruktoru je konfiguracia databazy -JDBC je database API, rovnako ako hibernate
         JdbcTemplate requestSender = new JdbcTemplate(configDatabase);
 
-        //TODO: select 1 atributu napr pocet vsetkych kontaktov, alebo meno konkretneho kontaktu
+        //TODO: select 1 all object from database
+         // ak idem pracovat s celym objektom, nie len jeho property, pouzijem RowMapper s instanciou nasej class-y daneho objektu
+        RowMapper<Contact> mapper = BeanPropertyRowMapper.newInstance(Contact.class);
 
-        Long numberOfContact = requestSender.queryForObject("select count(*) from kontakt where id =1", Long.class);
-        System.out.println("pocet kontaktov je " + numberOfContact);
+        Contact contact = requestSender.queryForObject("select * from kontakt where id =1", mapper);
+        System.out.println(contact);
     }
 }
