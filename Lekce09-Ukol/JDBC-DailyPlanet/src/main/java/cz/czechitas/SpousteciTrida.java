@@ -15,13 +15,19 @@ public class SpousteciTrida {
         config.setUser("student");
         config.setPassword("password");
 
-        JdbcTemplate requestSender = new JdbcTemplate();
+        JdbcTemplate requestSender = new JdbcTemplate(config);
         RowMapper<Article> mapper = BeanPropertyRowMapper.newInstance(Article.class);
 
+        //TODO 1: select 1 all object from database
 
+        Long id = 2L;
+        String title = "Lidé doma hromadí léky";
 
+        Article articlebyID = requestSender.queryForObject("SELECT * FROM clanky WHERE ID=?", mapper, id);
+        String authorOfArticleByTitle = requestSender.queryForObject("SELECT autor FROM clanky WHERE nazev=?", String.class, title);
 
+        System.out.println("Clanok s id 2 : " + articlebyID + "\n"
+                + "Autor clanku s nazvom " + title + "je: " + authorOfArticleByTitle + "\n");
 
     }
-
 }
