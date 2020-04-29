@@ -5,6 +5,7 @@ import java.util.*;
 import org.mariadb.jdbc.*;
 import org.springframework.dao.*;
 import org.springframework.jdbc.core.*;
+import org.springframework.jdbc.support.*;
 
 public class SpousteciTrida {
 
@@ -41,9 +42,34 @@ public class SpousteciTrida {
 
         //TODO 3: Update 1 contact
         String updatedName = "Alojz Milo";
+        //update metoda s parametrmi update query a updated parameter
         requestSender.update("UPDATE kontakt SET Jmeno=? where id = 1", updatedName);
         Contact updateContact = requestSender.queryForObject("SELECT * FROM kontakt WHERE id =1", mapper);
         System.out.println("\n" + "Update kontaku s ID 1: " + updateContact + "\n");
+
+        //TODO 4: Insert new contact
+
+        String newName = "Nikola Tesla";
+        String newNumber = "+421 000 000 000";
+        String newEmail = "nikola@tesla.com";
+
+        GeneratedKeyHolder generatedKeyHolder = new GeneratedKeyHolder();
+        requestSender
+                .update((Connection conn) -> {
+                            PreparedStatement statement = conn.prepareStatement("INSERT INTO kontakt (jmeno, telefonniCislo, email) " +
+                                    "VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+                            statement.setString(1, newName);
+                            statement.setString(2, newNumber);
+                            statement.setString(3, newEmail);
+                            return statement;
+                        },
+                        generatedKeyHolder);
+
+        //select whole table
+        List<Contact> contactList = requestSender.query("SELECT * FROM kontakt", mapper);
+        for (Contact eachContact : contactList) {
+            System.out.println(contactList);
+        }
 
     }
 }
