@@ -38,4 +38,13 @@ public class Contact {
     public void setEmail(String newValue) {
         email = newValue;
     }
+
+    @Override
+    public String toString() {
+        return "Contact " +
+                "id=" + id + ", " +
+                "jmeno=\"" + jmeno + "\"" + ", " +
+                "telefonniCislo=\"" + telefonniCislo + "\"" + ", " +
+                "email=\"" + email + "\"";
+    }
 }

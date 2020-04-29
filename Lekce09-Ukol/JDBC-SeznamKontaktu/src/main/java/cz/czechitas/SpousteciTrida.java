@@ -14,7 +14,7 @@ public class SpousteciTrida {
         configDatabase.setUser("student");
         configDatabase.setPassword("password");
 
-        // pripojenie k databaze , argument konstruktoru je konfiguracia databazy -JDBC je database API, rovnako ako hibernate
+        // ripojenie k databaze , argument konstruktoru je konfiguracia databazy -JDBC je database API, rovnako ako hibernate
         JdbcTemplate requestSender = new JdbcTemplate(configDatabase);
 
         //TODO: select 1 all object from database
@@ -23,5 +23,7 @@ public class SpousteciTrida {
 
         Contact contact = requestSender.queryForObject("select * from kontakt where id =1", mapper);
         System.out.println(contact);
+
+
     }
 }
