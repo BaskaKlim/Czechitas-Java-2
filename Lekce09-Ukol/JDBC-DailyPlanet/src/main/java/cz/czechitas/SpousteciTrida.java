@@ -63,13 +63,30 @@ public class SpousteciTrida {
         }
         System.out.println("\n");
 
-        //TODO 4 :Update an article with id 8
+        //TODO 4 :Update an article with id 14
 
         String updatedAutor = "Mikulas Kopernikus";
-        requestSender.update("UPDATE clanky SET Autor=? where id = 8",updatedAutor);
-       Article updateContact = requestSender.queryForObject("SELECT * FROM clanky WHERE id =8", mapper);
+        requestSender.update("UPDATE clanky SET Autor=? where id = 14", updatedAutor);
+        Article updateContact = requestSender.queryForObject("SELECT * FROM clanky WHERE id =14", mapper);
         System.out.println("\n" + "Update clanok: " + updateContact + "\n");
 
-        //TODO 4 :Delete an article with id 7
+        //TODO 4 :Delete an article with  title "Nový japonský císař         "
+
+        GeneratedKeyHolder generatedKeyHolderOfDeleteRequest = new GeneratedKeyHolder();
+        String deletedName = "Nový japonský císař";
+        requestSender
+                .update((Connection con) -> {
+                    PreparedStatement StatementDelete = con.prepareStatement("DELETE FROM clanky WHERE nazev = ?", Statement.RETURN_GENERATED_KEYS);
+                    StatementDelete.setString(1, deletedName);
+                    return StatementDelete;
+                }, generatedKeyHolderOfDeleteRequest);
+
+        System.out.println("\n");
+        List<Article> articlesWithoutDELETED = requestSender.query("SELECT * FROM clanky", mapper);
+        for (Article eachArticle : articlesWithoutDELETED) {
+            System.out.println(eachArticle);
+        }
+        System.out.println("\n");
     }
 }
+
