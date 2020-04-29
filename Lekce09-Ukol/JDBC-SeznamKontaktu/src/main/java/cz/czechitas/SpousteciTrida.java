@@ -3,6 +3,7 @@ package cz.czechitas;
 import java.sql.*;
 import java.util.*;
 import org.mariadb.jdbc.*;
+import org.springframework.dao.*;
 import org.springframework.jdbc.core.*;
 
 public class SpousteciTrida {
@@ -22,16 +23,21 @@ public class SpousteciTrida {
         RowMapper<Contact> mapper = BeanPropertyRowMapper.newInstance(Contact.class);
 
         //TODO: select 1 all object from database
-        Contact contact = requestSender.queryForObject("select * from kontakt where id =4", mapper);
-        System.out.println(contact);
+        Contact contactByID = requestSender.queryForObject("SELECT * FROM kontakt WHERE id =4", mapper);
+        String nameOfcontactByEmail = requestSender.queryForObject("SELECT jmeno FROM kontakt WHERE email='thomas@edison.com'",String.class);
+        System.out.println("Kontakt s ID 4 je: " + contactByID);
+        System.out.println("Kontakt s mailom tomas@edison.com patri cloveku s menom  : " + nameOfcontactByEmail);
 
         //TODO: select all contacts
         //pracujem s viacerymi objektmi, cize listom. Je potrebne pouzit funkciu .query nie .queryForObject a zaroven na vypisanie listu pouzit forEach
 
-        List<Contact> allContacts = requestSender.query("select * from kontakt", mapper);
+        List<Contact> allContacts = requestSender.query("SELECT * FROM kontakt", mapper);
+        System.out.println("Zoznam kontaktov: \n");
         for (Contact eachCustomer : allContacts) {
             System.out.println(eachCustomer);
 
         }
+        
+
     }
 }

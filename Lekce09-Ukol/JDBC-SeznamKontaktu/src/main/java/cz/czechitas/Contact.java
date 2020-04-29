@@ -7,6 +7,22 @@ public class Contact {
     String telefonniCislo;
     String email;
 
+
+    public Contact(Long id, String jmeno, String telefonniCislo, String email) {
+        this.id = id;
+        this.jmeno = jmeno;
+        this.telefonniCislo = telefonniCislo;
+        this.email = email;
+    }
+
+    public Contact(){
+
+    }
+
+    public Contact(String jmeno) {
+        this.jmeno = jmeno;
+    }
+
     public Long getId() {
         return id;
     }
@@ -41,7 +57,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact " +
+        return
                 "id=" + id + ", " +
                 "jmeno=\"" + jmeno + "\"" + ", " +
                 "telefonniCislo=\"" + telefonniCislo + "\"" + ", " +
