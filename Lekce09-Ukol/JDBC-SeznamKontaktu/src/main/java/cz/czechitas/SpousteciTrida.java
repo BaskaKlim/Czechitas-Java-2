@@ -22,14 +22,14 @@ public class SpousteciTrida {
         // ak idem pracovat s celym objektom, nie len jeho property, pouzijem RowMapper s instanciou nasej class-y daneho objektu
         RowMapper<Contact> mapper = BeanPropertyRowMapper.newInstance(Contact.class);
 
-        //TODO: select 1 all object from database
+        //TODO 1: select 1 all object from database
         String email = "thomas@edison.com";
         Contact contactByID = requestSender.queryForObject("SELECT * FROM kontakt WHERE id =4", mapper);
-        String nameOfcontactByEmail = requestSender.queryForObject("SELECT jmeno FROM kontakt WHERE email=?",String.class, email);
+        String nameOfcontactByEmail = requestSender.queryForObject("SELECT jmeno FROM kontakt WHERE email=?", String.class, email);
         System.out.println("Kontakt s ID 4 je: " + contactByID + "\n");
-        System.out.println("Kontakt s mailom tomas@edison.com patri cloveku s menom  : " + nameOfcontactByEmail +"\n");
+        System.out.println("Kontakt s mailom tomas@edison.com patri cloveku s menom  : " + nameOfcontactByEmail + "\n");
 
-        //TODO: select all contacts
+        //TODO 2: select all contacts
         //pracujem s viacerymi objektmi, cize listom. Je potrebne pouzit funkciu .query nie .queryForObject a zaroven na vypisanie listu pouzit forEach
 
         List<Contact> allContacts = requestSender.query("SELECT * FROM kontakt", mapper);
@@ -39,6 +39,11 @@ public class SpousteciTrida {
 
         }
 
+        //TODO 3: Update 1 contact
+        String updatedName = "Alojz Milo";
+        requestSender.update("UPDATE kontakt SET Jmeno=? where id = 1", updatedName);
+        Contact updateContact = requestSender.queryForObject("SELECT * FROM kontakt WHERE id =1", mapper);
+        System.out.println("\n" + "Update kontaku s ID 1: " + updateContact + "\n");
 
     }
 }
