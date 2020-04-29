@@ -12,7 +12,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.test.skip>true</maven.test.skip>
-
+        <!--properties for mariadb and java client-->
+        <spring.version>5.2.3.RELEASE</spring.version>
+        <mariadb-java-client.version>2.5.4</mariadb-java-client.version>
     </properties>
 
     <dependencies>
@@ -21,9 +23,20 @@
             <artifactId>sevecek-net-utils</artifactId>
             <version>0.9.1</version>
         </dependency>
+        <!--mmariaDB dependencies-->
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>${mariadb-java-client.version}</version>
+        </dependency>
+        <!--spring dependencies-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
-       
-        
+
     </dependencies>
 
     <build>
