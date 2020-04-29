@@ -23,10 +23,11 @@ public class SpousteciTrida {
         RowMapper<Contact> mapper = BeanPropertyRowMapper.newInstance(Contact.class);
 
         //TODO: select 1 all object from database
+        String email = "thomas@edison.com";
         Contact contactByID = requestSender.queryForObject("SELECT * FROM kontakt WHERE id =4", mapper);
-        String nameOfcontactByEmail = requestSender.queryForObject("SELECT jmeno FROM kontakt WHERE email='thomas@edison.com'",String.class);
-        System.out.println("Kontakt s ID 4 je: " + contactByID);
-        System.out.println("Kontakt s mailom tomas@edison.com patri cloveku s menom  : " + nameOfcontactByEmail);
+        String nameOfcontactByEmail = requestSender.queryForObject("SELECT jmeno FROM kontakt WHERE email=?",String.class, email);
+        System.out.println("Kontakt s ID 4 je: " + contactByID + "\n");
+        System.out.println("Kontakt s mailom tomas@edison.com patri cloveku s menom  : " + nameOfcontactByEmail +"\n");
 
         //TODO: select all contacts
         //pracujem s viacerymi objektmi, cize listom. Je potrebne pouzit funkciu .query nie .queryForObject a zaroven na vypisanie listu pouzit forEach
@@ -37,7 +38,7 @@ public class SpousteciTrida {
             System.out.println(eachCustomer);
 
         }
-        
+
 
     }
 }
