@@ -37,6 +37,39 @@ public class SpousteciTrida {
             System.out.println(eachArticle);
         }
 
-        //TODO 3: Update 1 contact
+        //TODO 3: Insert new article
+
+        String newTitle = "Kedy to skonci";
+        String newAuthor = "Corona Virosis";
+        String newDate = "2020-12-30";
+
+        GeneratedKeyHolder generatedKeyHolder = new GeneratedKeyHolder();
+        requestSender
+                .update((Connection conn) -> {
+                            PreparedStatement statement = conn.prepareStatement("INSERT INTO clanky (nazev, autor, datum) " +
+                                    "VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+                            statement.setString(1, newTitle);
+                            statement.setString(2, newAuthor);
+                            statement.setString(3, newDate);
+                            return statement;
+                        },
+                        generatedKeyHolder);
+
+        //print cely zoznam
+        System.out.println("\n");
+        List<Article> articlesWithNEW = requestSender.query("SELECT * FROM clanky", mapper);
+        for (Article eachArticle : articlesWithNEW) {
+            System.out.println(eachArticle);
+        }
+        System.out.println("\n");
+
+        //TODO 4 :Update an article with id 8
+
+        String updatedAutor = "Mikulas Kopernikus";
+        requestSender.update("UPDATE clanky SET Autor=? where id = 8",updatedAutor);
+       Article updateContact = requestSender.queryForObject("SELECT * FROM clanky WHERE id =8", mapper);
+        System.out.println("\n" + "Update clanok: " + updateContact + "\n");
+
+        //TODO 4 :Delete an article with id 7
     }
 }
