@@ -12,7 +12,9 @@ public class SpousteciTrida {
         configDatabase.setPassword("password");
         configDatabase.setUrl("jdbc:mysql://localhost:3306/VideoBoss");
 
+        RowMapper<Customer> mapper = BeanPropertyRowMapper.newInstance(Customer.class);
         JdbcTemplate requestHandler = new JdbcTemplate(configDatabase);
+        }
     }
 
 
