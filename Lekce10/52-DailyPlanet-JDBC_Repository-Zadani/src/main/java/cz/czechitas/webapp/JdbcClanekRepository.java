@@ -27,14 +27,29 @@ public class JdbcClanekRepository implements ClanekRepository {
             return clanky;
 
         } catch (SQLException sqle) {
-           throw new DataSourceLookupFailureException("Chyba pripojeni do databaze");
+            throw new DataSourceLookupFailureException("Chyba pripojeni do databaze");
         }
 
     }
 
     @Override
     public Clanek findById(Long id) {
-        throw new UnsupportedOperationException();
+        try {
+            MariaDbDataSource configDatabase = new MariaDbDataSource();
+            configDatabase.setUser("student");
+            configDatabase.setPassword("password");
+            configDatabase.setUrl("jdbc:mysql://localhost:3306/DailyPlanet");
+
+            RowMapper<Clanek> mapper = BeanPropertyRowMapper.newInstance(Clanek.class);
+            JdbcTemplate requestHandler = new JdbcTemplate(configDatabase);
+
+            Clanek clanokViaID = requestHandler.queryForObject("SELECT * FROM customers WHERE id = ?", mapper, id);
+            return clanokViaID;
+            
+        } catch (SQLException sqle) {
+            throw new DataSourceLookupFailureException("Chyba pripojeni do databaze");
+        }
+
     }
 
     @Override
