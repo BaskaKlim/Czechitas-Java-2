@@ -4,7 +4,7 @@ import org.mariadb.jdbc.*;
 
 public class SpousteciTrida {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         MariaDbDataSource configDatabase = new MariaDbDataSource();
         configDatabase.setUser("student");
         configDatabase.setPassword("password");
