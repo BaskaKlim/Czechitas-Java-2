@@ -68,4 +68,15 @@ public class Customer {
     public void setVersion(int newValue) {
         version = newValue;
     }
+
+    @Override
+    public String toString() {
+        return "Customer " +
+                "id=" + id + ", " +
+                "firstName=\"" + firstName + "\"" + ", " +
+                "lastName=\"" + lastName + "\"" + ", " +
+                "address=\"" + address + "\"" + ", " +
+                "deleted=" + deleted + ", " +
+                "version=" + version;
+    }
 }
