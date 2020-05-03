@@ -14,9 +14,13 @@ public class SpousteciTrida {
 
         RowMapper<Customer> mapper = BeanPropertyRowMapper.newInstance(Customer.class);
         JdbcTemplate requestHandler = new JdbcTemplate(configDatabase);
-        }
+
+        //provedeni dotazu do databaze
+        Long id = 14L;
+        Customer customerViaID = requestHandler.queryForObject("SELECT * FROM customers WHERE id = ?", mapper, id);
+        System.out.println(customerViaID);
     }
-
-
-
 }
+
+
+
