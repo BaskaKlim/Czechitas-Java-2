@@ -11,7 +11,7 @@ import org.springframework.http.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.server.*;
 
-@Repository
+//@Repository
 public class FileClanekRepository implements ClanekRepository {
 
     public static final Path CESTA_K_SOUBORU = Paths.get("data.csv");

@@ -9,6 +9,7 @@ import org.springframework.web.servlet.*;
 public class HlavniController {
 
     private ClanekRepository clanekRepository;
+    private InMemoryClanekRepository inMemoryClanekRepository;
 
     public HlavniController(ClanekRepository clanekRepository) {
         this.clanekRepository = clanekRepository;
