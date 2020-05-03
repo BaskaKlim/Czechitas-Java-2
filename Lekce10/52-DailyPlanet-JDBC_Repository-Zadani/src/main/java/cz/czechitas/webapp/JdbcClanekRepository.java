@@ -12,11 +12,12 @@ public class JdbcClanekRepository implements ClanekRepository {
 
     @Override
     public List<Clanek> findAll() {
-        
+
+        try {
             MariaDbDataSource configDatabase = new MariaDbDataSource();
             configDatabase.setUser("student");
             configDatabase.setPassword("password");
-            configDatabase.setUrl("jdbc:mysql://localhost:3306/VideoBoss");
+            configDatabase.setUrl("jdbc:mysql://localhost:3306/DailyPlanet");
 
             RowMapper<Clanek> mapper = BeanPropertyRowMapper.newInstance(Clanek.class);
             JdbcTemplate requestHandler = new JdbcTemplate(configDatabase);
@@ -24,6 +25,10 @@ public class JdbcClanekRepository implements ClanekRepository {
             List<Clanek> clanky = requestHandler.query("SELECT * FROM clanky", mapper);
 
             return clanky;
+
+        } catch (SQLException sqle) {
+           throw new DataSourceLookupFailureException("Chyba pripojeni do databaze");
+        }
 
     }
 
