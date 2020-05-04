@@ -57,7 +57,8 @@ public class JdbcClanekRepository implements ClanekRepository {
 
     @Override
     public void deleteById(Long id) {
-        throw new UnsupportedOperationException();
+        String sql = "DELETE FROM clanky WHERE id = ?";
+        requestHandler.update(sql, id);
     }
 
     //<------ PRIVATE METHOD----------------------------->
