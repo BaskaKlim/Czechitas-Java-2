@@ -5,6 +5,7 @@ import java.util.*;
 import org.mariadb.jdbc.*;
 import org.springframework.jdbc.core.*;
 import org.springframework.jdbc.datasource.lookup.*;
+import org.springframework.jdbc.support.*;
 import org.springframework.stereotype.*;
 
 @Repository
@@ -54,11 +55,31 @@ public class JdbcClanekRepository implements ClanekRepository {
 
     @Override
     public void save(Clanek zaznamKUlozeni) {
-        throw new UnsupportedOperationException();
+        //overim si ci uz id= primary kluc existuje v zazame
+        if(zaznamKUlozeni.getId() == null){
+            //vytvoreni zaznamu
+            pridaj(zaznamKUlozeni);
+        }  else {
+            //aktualizacia zaznamu
+            updatuj(zaznamKUlozeni);
+        }
     }
 
     @Override
     public void deleteById(Long id) {
         throw new UnsupportedOperationException();
+    }
+
+
+    //<------ PRIVATE METHOD----------------------------->
+
+    private void pridaj (Clanek zoznamPridani) {
+        GeneratedKeyHolder hodlerGeneredKey = new GeneratedKeyHolder();
+        String sql = "INSERT INTO clanky (nazev,autor,datum) VALUE (?,?m?)";
+
+    }
+
+    private void updatuj (Clanek zoznamUlozni) {
+
     }
 }
