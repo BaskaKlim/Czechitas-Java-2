@@ -14,6 +14,7 @@ public class JdbcClanekRepository implements ClanekRepository {
     RowMapper<Clanek> mapper;
     JdbcTemplate requestHandler;
 
+    //konstruktor, ktory mi naplmi mapper a reqestHandler vzdy pri nacitani
     public JdbcClanekRepository() {
         try {
             MariaDbDataSource configDatabase = new MariaDbDataSource();
@@ -31,15 +32,15 @@ public class JdbcClanekRepository implements ClanekRepository {
 
     @Override
     public List<Clanek> findAll() {
-
-        List<Clanek> clanky = requestHandler.query("SELECT * FROM clanky", mapper);
+        String sql = "SELECT * FROM clanky";
+        List<Clanek> clanky = requestHandler.query(sql, mapper);
         return clanky;
     }
 
     @Override
     public Clanek findById(Long id) {
-
-        Clanek clanokViaID = requestHandler.queryForObject("SELECT * FROM customers WHERE id = ?", mapper, id);
+        String sql = "SELECT * FROM customers WHERE id = ?";
+        Clanek clanokViaID = requestHandler.queryForObject(sql, mapper, id);
         return clanokViaID;
     }
 
