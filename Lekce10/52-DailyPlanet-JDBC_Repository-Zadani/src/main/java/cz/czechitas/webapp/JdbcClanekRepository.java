@@ -11,46 +11,36 @@ import org.springframework.stereotype.*;
 @Repository
 public class JdbcClanekRepository implements ClanekRepository {
 
-    @Override
-    public List<Clanek> findAll() {
+    RowMapper<Clanek> mapper;
+    JdbcTemplate requestHandler;
 
+    public JdbcClanekRepository() {
         try {
             MariaDbDataSource configDatabase = new MariaDbDataSource();
             configDatabase.setUser("student");
             configDatabase.setPassword("password");
             configDatabase.setUrl("jdbc:mysql://localhost:3306/DailyPlanet");
 
-            RowMapper<Clanek> mapper = BeanPropertyRowMapper.newInstance(Clanek.class);
-            JdbcTemplate requestHandler = new JdbcTemplate(configDatabase);
-
-            List<Clanek> clanky = requestHandler.query("SELECT * FROM clanky", mapper);
-
-            return clanky;
+            mapper = BeanPropertyRowMapper.newInstance(Clanek.class);
+            requestHandler = new JdbcTemplate(configDatabase);
 
         } catch (SQLException sqle) {
             throw new DataSourceLookupFailureException("Chyba pripojeni do databaze");
         }
+    }
 
+    @Override
+    public List<Clanek> findAll() {
+
+        List<Clanek> clanky = requestHandler.query("SELECT * FROM clanky", mapper);
+        return clanky;
     }
 
     @Override
     public Clanek findById(Long id) {
-        try {
-            MariaDbDataSource configDatabase = new MariaDbDataSource();
-            configDatabase.setUser("student");
-            configDatabase.setPassword("password");
-            configDatabase.setUrl("jdbc:mysql://localhost:3306/DailyPlanet");
 
-            RowMapper<Clanek> mapper = BeanPropertyRowMapper.newInstance(Clanek.class);
-            JdbcTemplate requestHandler = new JdbcTemplate(configDatabase);
-
-            Clanek clanokViaID = requestHandler.queryForObject("SELECT * FROM customers WHERE id = ?", mapper, id);
-            return clanokViaID;
-
-        } catch (SQLException sqle) {
-            throw new DataSourceLookupFailureException("Chyba pripojeni do databaze");
-        }
-
+        Clanek clanokViaID = requestHandler.queryForObject("SELECT * FROM customers WHERE id = ?", mapper, id);
+        return clanokViaID;
     }
 
     @Override
@@ -75,14 +65,6 @@ public class JdbcClanekRepository implements ClanekRepository {
     private void pridaj(Clanek zaznamPridani) {
         GeneratedKeyHolder hodlerGeneredKey = new GeneratedKeyHolder();
         String sql = "INSERT INTO clanky (nazev,autor,datum) VALUE (?,?,?)";
-        try {
-            MariaDbDataSource configDatabase = new MariaDbDataSource();
-            configDatabase.setUser("student");
-            configDatabase.setPassword("password");
-            configDatabase.setUrl("jdbc:mysql://localhost:3306/DailyPlanet");
-
-            RowMapper<Clanek> mapper = BeanPropertyRowMapper.newInstance(Clanek.class);
-            JdbcTemplate requestHandler = new JdbcTemplate(configDatabase);
 
             requestHandler.update((Connection conn) -> {
                         PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -93,9 +75,6 @@ public class JdbcClanekRepository implements ClanekRepository {
                     },
                     hodlerGeneredKey);
             zaznamPridani.setId(hodlerGeneredKey.getKey().longValue());
-        } catch (SQLException sqle) {
-            throw new DataSourceLookupFailureException("Chyba pripojeni do databaze");
-        }
     }
 
     private void updatuj(Clanek zoznamUlozni) {
