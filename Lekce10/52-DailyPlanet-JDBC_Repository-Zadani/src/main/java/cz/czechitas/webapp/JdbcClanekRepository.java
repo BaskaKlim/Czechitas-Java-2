@@ -66,18 +66,25 @@ public class JdbcClanekRepository implements ClanekRepository {
         GeneratedKeyHolder hodlerGeneredKey = new GeneratedKeyHolder();
         String sql = "INSERT INTO clanky (nazev,autor,datum) VALUE (?,?,?)";
 
-            requestHandler.update((Connection conn) -> {
-                        PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-                        statement.setString(1, zaznamPridani.getNazev());
-                        statement.setString(2, zaznamPridani.getAutor());
-                        statement.setObject(3, zaznamPridani.getDatum());
-                        return statement;
-                    },
-                    hodlerGeneredKey);
-            zaznamPridani.setId(hodlerGeneredKey.getKey().longValue());
+        requestHandler.update((Connection conn) -> {
+                    PreparedStatement statement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+                    statement.setString(1, zaznamPridani.getNazev());
+                    statement.setString(2, zaznamPridani.getAutor());
+                    statement.setObject(3, zaznamPridani.getDatum());
+                    return statement;
+                },
+                hodlerGeneredKey);
+        zaznamPridani.setId(hodlerGeneredKey.getKey().longValue());
     }
 
     private void updatuj(Clanek zoznamUlozni) {
+        String sql = "UPDATE clanky SET nazev = ?, autor = ?, datum = ? WHERE id = ?";
+
+        requestHandler.update(sql,
+                zoznamUlozni.getNazev(),
+                zoznamUlozni.getAutor(),
+                zoznamUlozni.getDatum(),
+                zoznamUlozni.getId());
 
     }
 }
