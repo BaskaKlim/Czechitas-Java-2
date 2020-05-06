@@ -15,7 +15,6 @@
 <body>
 
 
-
     <form method="post" class="pexeso">
 
         <th:block th:each="karta , pocitadlo : ${aktualniHerniPlocha.karticky}" style="display: none;">
@@ -34,25 +33,25 @@
                  th:src="${'images/empty.png'}"/>
         </th:block>
 
-        <input type="image" src="../static/images/pex1.png" name="vybranaKarta0"/>
-        <input type="image" src="../static/images/pex1.png" name="vybranaKarta1"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta2"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta3"/>
+        <input th:remove="all" type="image" src="../static/images/pex1.png" name="vybranaKarta0"/>
+        <input th:remove="all" type="image" src="../static/images/pex1.png" name="vybranaKarta1"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta2"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta3"/>
 
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta4"/>
-        <input type="image" src="../static/images/pex3.png" name="vybranaKarta5"/>
-        <input type="image" src="../static/images/pex3.png" name="vybranaKarta6"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta7"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta4"/>
+        <input th:remove="all" type="image" src="../static/images/pex3.png" name="vybranaKarta5"/>
+        <input th:remove="all" type="image" src="../static/images/pex3.png" name="vybranaKarta6"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta7"/>
 
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta8"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta9"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta10"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta11"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta8"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta9"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta10"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta11"/>
 
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta12"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta13"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta14"/>
-        <input type="image" src="../static/images/rub.png" name="vybranaKarta15"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta12"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta13"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta14"/>
+        <input th:remove="all" type="image" src="../static/images/rub.png" name="vybranaKarta15"/>
 
     </form>
 
