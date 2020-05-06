@@ -8,9 +8,9 @@ import cz.czechitas.webapp.persistence.*;
 @Component
 public class PexesoService {
 
-    private InMemoryRepository ulozisteHer;
+    private PexesoRepository ulozisteHer;
 
-    public PexesoService(InMemoryRepository ulozisteHer) {
+    public PexesoService(PexesoRepository ulozisteHer) {
         this.ulozisteHer = ulozisteHer;
     }
 
@@ -93,6 +93,7 @@ public class PexesoService {
         if (karta1.getCisloObrazku() == karta2.getCisloObrazku()) {
             karta1.setStav(StavKarty.ODEBRANA);
             karta2.setStav(StavKarty.ODEBRANA);
+
         } else {
             karta1.setStav(StavKarty.RUBEM_NAHORU);
             karta2.setStav(StavKarty.RUBEM_NAHORU);

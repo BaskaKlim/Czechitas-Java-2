@@ -4,7 +4,8 @@ import java.util.*;
 import org.springframework.stereotype.*;
 import cz.czechitas.webapp.entity.*;
 
-//@Repository
+/*
+//@Component
 public class InMemoryRepository implements PexesoRepository {
 
     private Random random;
@@ -40,4 +41,7 @@ public class InMemoryRepository implements PexesoRepository {
     private Long vygenerujNahodneId() {
         return (long) Math.abs(random.nextInt());
     }
+
+
 }
+ */
