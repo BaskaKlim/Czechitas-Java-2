@@ -6,11 +6,11 @@ html { box-sizing: border-box; }
 *, *:after, *:before { box-sizing: border-box;}
 
 
+
 body {
     padding: 10px 50px;
-    background: bisque url('../images/pozadi.jpg') center center no-repeat;
+    background-image: url("../images/pozadi.jpg");
     background-size: cover;
-    color: black;
     font-family: sans-serif;
     font-size: large;
     min-height: 100vh;

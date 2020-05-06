@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet"
           href="../static/css/styles.css"
-          th:href="${'css/styles.css'}"/>
+          th:href="@{'css/styles.css'}"/>
     <link rel="icon"
           href="../static/images/favicon.png"
-          th:href="${'images/favicon.png'}"/>
+          th:href="@{'images/favicon.png'}"/>
     <title>Pexeso</title>
 </head>
 <body>
 
+    <div class="zprava"
+         th:if="${aktualniHerniPlocha.stav == T(cz.czechitas.webapp.entity.StavHry).KONEC}">
+        <h2>Gratulujeme!</h2>
 
+        <a th:href="@{/}" href="stul.html">Začít novou hru</a>
+    </div>
+
+
+    <div class="link">
+        <a link href="/templates/index.html" th:href="@{/}"> Mix it! </a>
+    </div>
+    
     <form method="post" class="pexeso">
 
         <th:block th:each="karta , pocitadlo : ${aktualniHerniPlocha.karticky}" style="display: none;">
