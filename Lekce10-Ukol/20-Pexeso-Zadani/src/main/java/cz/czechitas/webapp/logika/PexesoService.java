@@ -8,9 +8,9 @@ import cz.czechitas.webapp.persistence.*;
 @Component
 public class PexesoService {
 
-    private PexesoRepository ulozisteHer;
+    private InMemoryRepository ulozisteHer;
 
-    public PexesoService(PexesoRepository ulozisteHer) {
+    public PexesoService(InMemoryRepository ulozisteHer) {
         this.ulozisteHer = ulozisteHer;
     }
 
