@@ -24,13 +24,13 @@ public class PexesoService {
             cisloKarty++;
         }
         Collections.shuffle(karticky);
-        HerniPlocha novaPlocha = new HerniPlocha(karticky, GameState.PLAYER1_CHOOSE_FIRST_CARD);
+        HerniPlocha novaPlocha = new HerniPlocha(karticky, StavHry.HRAC1_VYBER_PRVNI_KARTY);
         novaPlocha = ulozisteHer.save(novaPlocha);
         return novaPlocha;
     }
 
     private Karta vytvorKartu(int cisloKarty) {
-        return new Karta(cisloKarty, CardState.FACE_DOWN);
+        return new Karta(cisloKarty, StavKarty.RUBEM_NAHORU);
     }
 
     public HerniPlocha najdiHerniPlochu(Long id) {
@@ -41,17 +41,17 @@ public class PexesoService {
     public void provedTah(Long idHerniPlochy, int poziceKartyNaKterouSeKliknulo) {
         HerniPlocha aktualniPlocha = ulozisteHer.findById(idHerniPlochy);
 
-        if (aktualniPlocha.getStav() == GameState.PLAYER1_CHOOSE_FIRST_CARD) {
+        if (aktualniPlocha.getStav() == StavHry.HRAC1_VYBER_PRVNI_KARTY) {
             vyberPrvniKartu(poziceKartyNaKterouSeKliknulo, aktualniPlocha);
-        } else if (aktualniPlocha.getStav() == GameState.PLAYER1_CHOOSE_SECOND_CARD) {
+        } else if (aktualniPlocha.getStav() == StavHry.HRAC1_VYBER_DRUHE_KARTY) {
             vyberDruhouKartu(poziceKartyNaKterouSeKliknulo, aktualniPlocha);
-        } else if (aktualniPlocha.getStav() == GameState.PLAYER1_SHOW_RESULT) {
+        } else if (aktualniPlocha.getStav() == StavHry.HRAC1_ZOBRAZENI_VYHODNOCENI) {
             List<Karta> karticky = vyhodnotOtoceneKarticky(aktualniPlocha);
 
             if (!jeKonecHry(karticky)) {
-                aktualniPlocha.setStav(GameState.PLAYER1_CHOOSE_FIRST_CARD);
+                aktualniPlocha.setStav(StavHry.HRAC1_VYBER_PRVNI_KARTY);
             } else {
-                aktualniPlocha.setStav(GameState.END);
+                aktualniPlocha.setStav(StavHry.KONEC);
             }
         }
 
@@ -60,17 +60,17 @@ public class PexesoService {
 
     private void vyberPrvniKartu(int poziceKartyNaKterouSeKliknulo, HerniPlocha aktualniPlocha) {
         Karta karticka = aktualniPlocha.getKarticky().get(poziceKartyNaKterouSeKliknulo);
-        if (karticka.getStav() == CardState.FACE_DOWN) {
-            karticka.setStav(CardState.FACE_UP);
-            aktualniPlocha.setStav(GameState.PLAYER1_CHOOSE_SECOND_CARD);
+        if (karticka.getStav() == StavKarty.RUBEM_NAHORU) {
+            karticka.setStav(StavKarty.LICEM_NAHORU);
+            aktualniPlocha.setStav(StavHry.HRAC1_VYBER_DRUHE_KARTY);
         }
     }
 
     private void vyberDruhouKartu(int poziceKartyNaKterouSeKliknulo, HerniPlocha aktualniPlocha) {
         Karta karticka = aktualniPlocha.getKarticky().get(poziceKartyNaKterouSeKliknulo);
-        if (karticka.getStav() == CardState.FACE_DOWN) {
-            karticka.setStav(CardState.FACE_UP);
-            aktualniPlocha.setStav(GameState.PLAYER1_SHOW_RESULT);
+        if (karticka.getStav() == StavKarty.RUBEM_NAHORU) {
+            karticka.setStav(StavKarty.LICEM_NAHORU);
+            aktualniPlocha.setStav(StavHry.HRAC1_ZOBRAZENI_VYHODNOCENI);
 
         }
     }
@@ -83,19 +83,19 @@ public class PexesoService {
         int i = 0;
         for (; i < karticky.size(); i++) {
             karta1 = karticky.get(i);
-            if (karta1.getStav() == CardState.FACE_UP) break;
+            if (karta1.getStav() == StavKarty.LICEM_NAHORU) break;
         }
         int j = i + 1;
         for (; j < karticky.size(); j++) {
             karta2 = karticky.get(j);
-            if (karta2.getStav() == CardState.FACE_UP) break;
+            if (karta2.getStav() == StavKarty.LICEM_NAHORU) break;
         }
         if (karta1.getCisloObrazku() == karta2.getCisloObrazku()) {
-            karta1.setStav(CardState.COLLECTED);
-            karta2.setStav(CardState.COLLECTED);
+            karta1.setStav(StavKarty.ODEBRANA);
+            karta2.setStav(StavKarty.ODEBRANA);
         } else {
-            karta1.setStav(CardState.FACE_DOWN);
-            karta2.setStav(CardState.FACE_DOWN);
+            karta1.setStav(StavKarty.RUBEM_NAHORU);
+            karta2.setStav(StavKarty.RUBEM_NAHORU);
         }
         return karticky;
     }
@@ -103,7 +103,7 @@ public class PexesoService {
     private boolean jeKonecHry(List<Karta> karticky) {
         boolean jeKonec = true;
         for (Karta karta : karticky) {
-            if (karta.getStav() != CardState.COLLECTED) {
+            if (karta.getStav() != StavKarty.ODEBRANA) {
                 jeKonec = false;
             }
         }

@@ -1,17 +1,18 @@
 package cz.czechitas.webapp.entity;
 
+import java.time.*;
 import java.util.*;
 
 public class HerniPlocha {
 
     private Long id;
-    private GameState stav;
+    private StavHry stav;
     private List<Karta> karticky;
 
     public HerniPlocha() {
     }
 
-    public HerniPlocha(List<Karta> karticky, GameState stav) {
+    public HerniPlocha(List<Karta> karticky, StavHry stav) {
         this.karticky = karticky;
         this.stav = stav;
     }
@@ -24,11 +25,11 @@ public class HerniPlocha {
         this.id = id;
     }
 
-    public GameState getStav() {
+    public StavHry getStav() {
         return stav;
     }
 
-    public void setStav(GameState stav) {
+    public void setStav(StavHry stav) {
         this.stav = stav;
     }
 
