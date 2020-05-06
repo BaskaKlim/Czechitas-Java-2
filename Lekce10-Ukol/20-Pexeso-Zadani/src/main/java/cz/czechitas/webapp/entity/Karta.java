@@ -4,12 +4,12 @@ public class Karta {
 
     private Long id;
     private int cisloKarty;
-    private StavKarty stav;
+    private CardState stav;
 
     public Karta() {
     }
 
-    public Karta(int cisloKarty, StavKarty stav) {
+    public Karta(int cisloKarty, CardState stav) {
         this.cisloKarty = cisloKarty;
         this.stav = stav;
     }
@@ -34,11 +34,11 @@ public class Karta {
         return cisloKarty / 2;
     }
 
-    public StavKarty getStav() {
+    public CardState getStav() {
         return stav;
     }
 
-    public void setStav(StavKarty stav) {
+    public void setStav(CardState stav) {
         this.stav = stav;
     }
 }
