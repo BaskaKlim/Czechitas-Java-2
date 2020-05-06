@@ -17,7 +17,7 @@ public class PexesoService {
     public HerniPlocha vytvorNovouHerniPlochu() {
         List<Karta> karticky = new ArrayList<>();
         int cisloKarty = 0;
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 16; i++) {
             karticky.add(vytvorKartu(cisloKarty));
             cisloKarty++;
             karticky.add(vytvorKartu(cisloKarty));
