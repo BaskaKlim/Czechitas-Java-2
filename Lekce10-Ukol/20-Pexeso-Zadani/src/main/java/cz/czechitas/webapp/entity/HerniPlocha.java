@@ -17,6 +17,7 @@ public class HerniPlocha {
         this.stav = stav;
     }
 
+
     public Long getId() {
         return id;
     }
@@ -40,4 +41,5 @@ public class HerniPlocha {
     public void setKarticky(List<Karta> newValue) {
         karticky = newValue;
     }
+
 }

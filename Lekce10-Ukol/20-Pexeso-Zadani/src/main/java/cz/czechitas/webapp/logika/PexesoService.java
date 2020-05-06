@@ -8,6 +8,7 @@ import cz.czechitas.webapp.persistence.*;
 @Component
 public class PexesoService {
 
+
     private PexesoRepository ulozisteHer;
 
     public PexesoService(PexesoRepository ulozisteHer) {
@@ -15,6 +16,7 @@ public class PexesoService {
     }
 
     public HerniPlocha vytvorNovouHerniPlochu() {
+
         List<Karta> karticky = new ArrayList<>();
         int cisloKarty = 0;
         for (int i = 0; i < 16; i++) {

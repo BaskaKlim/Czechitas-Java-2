@@ -1,5 +1,6 @@
 /* google fonts */
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&subset=latin-ext');
+@import url( 'https://fonts.googleapis.com/css?family=Pacifico');
 
 /* box model */
 html { box-sizing: border-box; }
@@ -9,7 +10,7 @@ html { box-sizing: border-box; }
 
 body {
     padding: 10px 50px;
-    background-image: url("../images/pozadi.jpg");
+    background-image: url("../images/pozadi.png");
     background-size: cover;
     font-family: sans-serif;
     font-size: large;
@@ -18,7 +19,8 @@ body {
 
 h1 {
     margin: 50px 0;
-    font-family: 'Alfa Slab One', sans-serif;
+    color: #7f418b;
+    font-family: 'Pacifico', sans-serif;
     text-align: center;
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -88,4 +90,27 @@ h2 {
 
 .neviditelne {
     display: none;
+}
+
+/* wall.html */
+
+.intro, table, .nav {
+    width: 850px;
+    margin: 30px auto;
+
+
+}
+.table {
+    border-collapse: collapse;
+    text-decoration-color: white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color:lightskyblue;
 }
