@@ -36,6 +36,7 @@ public class InMemoryRepository implements PexesoRepository {
         return plocha;
     }
 
+    //-------------PRIVATE METHODS------------------------------------------------------------
     private Long vygenerujNahodneId() {
         return (long) Math.abs(random.nextInt());
     }
